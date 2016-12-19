@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <title>七巧板</title>
+</head>
+<body>
+    <div class="root" id="root"></div>
+    <script>
+        window.$GLOBALCONFIG = {};
+        +function(global){
+
+            // 本地开发打开的路径以及端口
+            global.$ctx = "http://localhost:2000";
+
+            global.CTI_SERVER_IP = "210.14.88.129";
+
+            // 用户登出URL
+            global.LOGOUT_URL = "http://192.168.1.177:9043/logout?service=http%3A%2F%2F192.168.1.177%3A9043%3Fservice%3Dhttp%3A%2F%2F192.168.1.188%3A19480%2F";
+
+            // 用户登录信息
+            global.STAFF = {
+                code: 'admin',
+                name: '黄焖鸡',
+                "previousLoginTime":"2016-08-01 3:11:29",
+                "previousLoginIp":"192.168.1.12",
+                "previousLoginCity":"",
+                "id":"43"
+            };
+
+            // 系统一二级菜单
+            global.NAVIGATION = [
+                {
+                    "id":600000200,
+                    "name":"基础数据",
+                    "url":"",
+                    "children":[
+                        { "id":600000201, "name":"气温统计", "url":"apphouse" },
+                        { "id":600000202, "name":"人口统计", "url":"apppop" },
+                        { "id":600000203, "name":"省份数据统计", "url":"province" },
+                        { "id":600000204, "name":"接口访问量统计", "url":"visit" },
+                        { "id":600000205, "name":"今天新增数据", "url":"newdata" },
+                        { "id":600000206, "name":"模拟人口迁徙", "url":"popflow" },
+                        // { "id":600000207, "name":"人物关系图", "url":"relation" }
+                    ]
+                },
+                {
+                    "id":600000400,
+                    "name":"首页",
+                    "url":"",
+                },
+                {
+                    "id":600000500,
+                    "name":"数据应用",
+                    "url":"dataApp",
+                },
+                {
+                    "id":600000600,
+                    "name":"数据服务",
+                    "url":"dataService",
+                },
+                {
+                    "id":600000700,
+                    "name":"信息资源",
+                    "url":"info",
+                },
+                {
+                    "id":600000700,
+                    "name":"零散数据",
+                    "url":"scatteredData",
+                },
+                {
+                    "id":600000800,
+                    "name":"个人信息",
+                    "url":"user",
+                }
+            ];
+
+
+            }(window.$GLOBALCONFIG);
+    </script>
+
+</body>
+</html>

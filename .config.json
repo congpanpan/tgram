@@ -1,0 +1,15 @@
+{
+    "username":"admin",
+    "password":"123456",
+    "TARGET_LIST": {
+        "DEFAULT": "http://10.118.164.206:8080",
+        "TEST": "http://192.168.1.203:19480"
+    },
+    "DEFAULT_CAS_SERVER": "http://10.118.164.206:8080",
+    "proxyPaths": [
+    	"/common*/*.json",
+        "/house/*.json",
+        "/jcjw/*.json"
+
+    ]
+}

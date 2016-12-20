@@ -1077,7 +1077,7 @@ h6,
 }
 
 .panel-body {
-  padding: 10px 10px 0 10px;
+  padding: 15px 20px 0 20px;
 }
 .panel-body .row,
 .panel-body .form-horizontal .form-group {
@@ -1164,7 +1164,7 @@ h6,
 .type-map li{ font-size: 12px; padding:5px;}
 .type-map li .detail{ color: blue; padding:0 0 0 10px;cursor: pointer; }
 .main .box .amap-container{ border-left: 1px solid #ddd;}
-.main .box{ margin:10px 0 0 0; }
+// .main .box{ margin:10px 0 0 0; }
 .main .box .ant-pagination { margin:20px 0 0 0;padding: 20px 0 0 20px; border-top: 1px solid #ddd;}
 .ant-input-wrapper input[type="text"]{ height: 32px; }
 .multi-select .multi-select-single{ border-radius: 2px; }
@@ -1230,5 +1230,54 @@ h6,
   }
   .buttons{ position: absolute; z-index: 80;bottom: 10px;left: 10px;
     .ant-btn{margin: 0 10px 10px 0;}
+  }
+}
+.link{ color: #0088cc;}
+.text-right{ text-align: right;}
+
+.main { margin-bottom: 30px;
+  .box{ position: relative; height: 212px; overflow:hidden; padding: 10px; border:1px solid #ccc;}
+  .tbl{ width: 100%;
+    td{ padding:8px 12px;  }
+    td:last-of-type{border-right: 1px dashed #d7f3ff;}
+  }
+  .content{ border: 1px solid #d7f3ff;}
+  .content .ant-col-8:last-of-type td{ border-right: 0;}
+  .head .title{ display: inline-block; font-size: 14px; font-weight: bold;overflow: hidden;line-height: 24px; height: 24px; position: relative;}
+}
+.user{
+  .buttons{ text-align: center;
+    .down{ width: 150px; height: 80px; line-height: 70px; font-size: 14px; vertical-align: top; margin-right: 100px;}
+    .upload{ width: 100px; height: 80px; line-height: 35px; font-size: 14px;vertical-align: top; white-space: normal;margin-right: 20px;}
+    .thumb{ max-height: 180px; max-width: 170px;}
+  }
+}
+
+.welcome{ max-height: 500px; overflow-y: auto;
+  .sub{ font-size: 12px; margin:0 0 0 10px;}
+  .box{ height: 245px; overflow:hidden; margin-bottom: 5px; }
+  .ant-card-body{ padding:10px; height: 185px; overflow:hidden;}
+  // .icons{ height: 170px; overflow: hidden;}
+  .icons li{
+    float: left; margin:5px 5px 5px 0; text-align: center; width: 80px; height: 77px; overflow:hidden;
+    a{ display: block;
+      p{color: #333; white-space: nowrap; width: 100%; text-overflow:ellipsis;}
+    }
+    .icon-wrap{ 
+      display: block; width: 57px; height: 57px; line-height: 57px; border-radius: 57px; margin:0 auto;
+      i{ color: #fff; font-size: 22px;}
+    }
+    .blue{ background-color: #51a7fa;}
+    .green{ background-color: #70bf40;}
+    .red{ background-color: #ec5d57;}
+    .purple{ background-color: #b46ae3;}
+    .orange{ background-color: #f39019;}
+  }
+  .tbl{
+    border:1px solid #c0eefe; width: 100%;
+    td a{display: block; border-bottom: 1px dashed #ccc; white-space: nowrap;    text-overflow: ellipsis; color: #333; padding: 6px;
+      span{margin:0 5px 0 0;}
+      .yellow{ color: #f39019;}
+    }
   }
 }

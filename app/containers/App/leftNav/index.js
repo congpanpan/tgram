@@ -54,6 +54,13 @@ export default class LeftNav extends Component {
     }
     this.setState({ openKeys: nextOpenKeys });
   }
+  
+  getAncestorKeys(key) {
+    const map = {
+      sub3: ['sub2'],
+    };
+    return map[key] || [];
+  }
 
   renderMenu(subMenu, index){
     if(subMenu.children){

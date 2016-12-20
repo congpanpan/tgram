@@ -10,7 +10,8 @@ import RightAside from './rightAside'
 import TabList from './tabList'
 import Extra from './extra'
 
-import './style.css'
+import 'antd/dist/antd.less'
+import '../../style/base.less'
 
 @connect(
     (state, props) => ({}),

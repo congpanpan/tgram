@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Table, Button, Tabs } from 'antd'
+import { Table, Button, Tabs, Row, Col } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
 
@@ -42,7 +42,67 @@ export default class user extends Component {
   render() {
     return (
       <Panel>
-        个人信息
+        <div className="main">
+          <div className="box">
+            <h3 className="head"><span className="title">用户信息</span></h3>
+            <Row gutter={16}>
+              <Col span={8}>
+                <table className="tbl">
+                  <tbody>
+                    <tr>
+                      <td>姓名：</td>
+                      <td className="text-right">
+                        <span className="link">QQB测试</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>部门：</td>
+                      <td className="text-right">
+                        <span className="link">杭州市公安局信息通信处（科技处）计算机应用管理科</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Col>
+              <Col span={8}>
+                <table className="tbl">
+                  <tbody>
+                    <tr>
+                      <td>警号：</td>
+                      <td className="text-right">
+                        <span className="link">qiqiaoban</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>身份证号：</td>
+                      <td className="text-right">
+                        <span className="link">42900519741202857X</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Col>
+              <Col span={8}>
+                <table className="tbl">
+                  <tbody>
+                    <tr>
+                      <td>用户权限：</td>
+                      <td className="text-right">
+                        <span className="link">普通用户</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>用户ID：</td>
+                      <td className="text-right">
+                        <span className="link">11039</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Col>
+            </Row>
+          </div>
+        </div>
       </Panel>
     )
 

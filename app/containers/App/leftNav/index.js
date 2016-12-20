@@ -40,7 +40,7 @@ export default class LeftNav extends Component {
   }
 
   _handleToggle(openKeys) {
-    console.log(openKeys)
+    // console.log(openKeys)
     const state = this.state;
     const latestOpenKey = openKeys.find(key => !(state.openKeys.indexOf(key) > -1));
     const latestCloseKey = state.openKeys.find(key => !(openKeys.indexOf(key) > -1));

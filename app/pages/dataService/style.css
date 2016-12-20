@@ -1,0 +1,101 @@
+.service-div-cpp{
+	border:solid #d6d6d6 1px;
+	height: 200px;
+	margin:10px;
+}
+.service-bigDiv-cpp{
+	border:solid #d6d6d6 1px;
+	height: 400px;
+	margin:10px;
+}
+.div-title-cpp{
+	font-size: 14px;
+	color: black;
+	padding: 10px;
+}
+.more-cpp {
+	float: right;
+	padding: 5px;
+}
+.add-service-cpp span,.add-service-cpp a{
+	margin: 10px;
+}
+.add-service-cpp ul li{
+	border-bottom: dashed #DDDFDF 1px;
+	height:25px;
+	margin-top: 5px
+}
+.serviceCount-cpp{
+	margin:40px 0px 0px 60px;
+}
+.serviceCount-cpp button{
+	margin: 10px
+}
+.add-button-cpp{
+	width: 70px;
+	height: 60px;
+}
+.add-button-cpp a{
+	margin:0px 0px 0px 0px;
+}
+.add-bigButton-cpp{
+	width: 85px;
+	height: 60px;
+}
+.provider-div-cpp{
+	margin:10px;
+	padding: 5px;
+    border: solid #77C3E4 1px;
+}
+.provider-div-cpp a{
+    float: right;
+}
+.service-bigDiv-cpp ul li{
+	border-bottom: dashed #DDDFDF 1px;
+	height:50px;
+	margin-top: 15px
+}
+.service-img-cpp{ 
+	background-image: url(../../images/vfs.png)  ;
+	margin: 46px 10px 0px 10px;
+    padding: 0px 20px 27px 22px;
+}
+.service-table-cpp{
+	margin-top: 10px;
+}
+/*服务管理的样式*/
+.search-cpp input{
+  width:30%;
+}
+.serviceManage-button-cpp{
+	float: right;
+}
+/*服务申请的样式*/
+.apply-div-cpp{
+	border:solid #d6d6d6 1px;
+	padding: 10px;
+	margin: 10px;
+}
+.apply-title-cpp ul{
+	
+}
+.apply-title-cpp ul li{
+	height:22px;
+	padding: 5px;
+}
+.apply-span-cpp{
+	background-color: #57C5F7;
+	padding: 3px;
+	margin-top: 5px;
+	color:#fff;
+}
+.use-span-cpp{
+	background-color: #FA0;
+	padding: 3px;
+	color:#fff;
+}
+.apply-button-cpp button{
+	margin-top: 20px;
+	background-color: #06CE5D;
+	color:#fff;
+}

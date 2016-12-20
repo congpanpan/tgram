@@ -63,6 +63,7 @@ import {
   user,
 } from './pages/user'
 
+import searchContent from './containers/App/search/searchContent'
 
 
 /*进入路由的判断*/
@@ -102,6 +103,7 @@ const routes = (
       <Route path="/info" component={info} />
       <Route path="/scatteredData" component={scatteredData} />
       <Route path="/user" component={user} />
+      <Route path="/searchContent/:value" component={searchContent} />
     </Route>
 
     <Route path="/login" component={Login} />

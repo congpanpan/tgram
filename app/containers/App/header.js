@@ -5,6 +5,7 @@ import { Menu, Dropdown, Icon, Button, Modal } from 'antd'
 import { 
   fetchStaff,
 } from 'actions/common'
+import Search from './search/index'
 
 const confirm = Modal.confirm
 
@@ -104,9 +105,8 @@ export default class Header extends Component {
               </div>
             </a>
           </div>
-
           <div className="navbar-content clearfix">
-
+            <Search/>
             <ul className="nav navbar-top-links pull-right">
               <li className="login-info">
                 <a>在线人数 {staff.onlineCount}</a>

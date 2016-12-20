@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Table, Button, Tabs } from 'antd'
+import { Table, Button, Tabs, Card, col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+
+import CardsComponent from './cards/cards'
 
 
 const TabPane = Tabs.TabPane;
@@ -42,7 +44,16 @@ export default class dataApp extends Component {
   render() {
     return (
       <Panel>
-        数据应用
+        <div className="houseAddrList-tab">
+          <Tabs tabPosition="top" onChange={this._typeChange}>
+            <TabPane tab="应用首页" key="list">
+              <CardsComponent></CardsComponent>
+            </TabPane>
+            <TabPane tab="应用管理" key="map">
+              数据应用2
+            </TabPane>
+          </Tabs>
+        </div>
       </Panel>
     )
 

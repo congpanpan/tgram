@@ -84,6 +84,7 @@ import  appNative  from './pages/dataApp/cards/component/appNative'
 import  appModel  from './pages/dataApp/cards/component/appModel'
 import  addNewModel  from './pages/dataApp/cards/component/addNewModel'
 import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
+import  appAttribute  from './pages/dataApp/cards/component/appAttribute'
 
 /*进入路由的判断*/
 window.loginFlag = true
@@ -124,6 +125,7 @@ const routes = (
       <Route path="/dataApp/appModel" component={appModel} />
       <Route path="/dataApp/addNewModel" component={addNewModel} />
       <Route path="/dataApp/addNewNative" component={addNewNative} />
+      <Route path="/dataApp/appAttribute" component={appAttribute} />
 
       <Route path="/dataService" component={dataService} />
       <Route path="/info" component={info} />

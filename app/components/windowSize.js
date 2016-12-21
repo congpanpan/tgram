@@ -12,13 +12,13 @@ export default class windowSize extends Component {
   }
 
   updateState(){
-    global.$GLOBALCONFIG.PAGEHEIGHT = document.body.clientHeight - 51
+    global.$GLOBALCONFIG.PAGEHEIGHT = document.body.clientHeight - 21
     this.props.updateState()
   }
 
   // 组件已经加载到dom中
   componentDidMount() {
-    global.$GLOBALCONFIG.PAGEHEIGHT = document.body.clientHeight - 51
+    global.$GLOBALCONFIG.PAGEHEIGHT = document.body.clientHeight - 21
     // this.setState({})
     this.props.updateState()
   }

@@ -63,6 +63,17 @@ import {
   user,
 } from './pages/user'
 
+import {
+  sysList, sysPage
+} from './pages/index/sys'
+
+import {
+  talkList, talkPage
+} from './pages/index/talk'
+
+import {
+  logList, 
+} from './pages/index/log'
 
 
 /*进入路由的判断*/
@@ -86,7 +97,6 @@ const routes = (
       <IndexRoute component={Welcome}/>
 
 
-
       {/***基础应用 开始*/}
       <Route path="/apphouse" component={apphouse} />
       <Route path="/apppop" component={apppop} />
@@ -102,6 +112,13 @@ const routes = (
       <Route path="/info" component={info} />
       <Route path="/scatteredData" component={scatteredData} />
       <Route path="/user" component={user} />
+
+      <Route path="/index" component={Welcome} />
+      <Route path="/sysList" component={sysList} />
+      <Route path="/sysPage/:pageId" component={sysPage} />
+      <Route path="/talkList" component={talkList} />
+      <Route path="/talkPage/:pageId" component={talkPage} />
+      <Route path="/logList" component={logList} />
     </Route>
 
     <Route path="/login" component={Login} />

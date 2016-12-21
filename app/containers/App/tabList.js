@@ -70,6 +70,7 @@ export default class TabList extends Component {
         activeKey={tabList.activeKey}
         type="editable-card"
         onEdit={this.onEdit}
+        className="gTab"
       >
         {
           tabList.list.map((tab) =>

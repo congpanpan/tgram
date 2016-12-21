@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Table, Button, Tabs, Row, Col } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+import WindowSize from 'components/windowSize'
 const TabPane = Tabs.TabPane
 
 
@@ -21,6 +22,7 @@ export default class user extends Component {
     super(props)
     this.state = {
     }
+    this.updateState=this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -36,11 +38,15 @@ export default class user extends Component {
     
   }
 
+  updateState(){
+    this.setState({})
+  }
 
   render() {
     return (
-      <Panel>
-        <div className="user">
+      <div className="body user"  style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <WindowSize updateState={this.updateState}/>
+        <Panel>
           <div className="main">
             <div className="box">
               <h3 className="head"><span className="title">用户信息</span></h3>
@@ -109,12 +115,12 @@ export default class user extends Component {
                 <div className="buttons">
                   <Button type="primary" className="down">下载审批表</Button>
                   <Button type="primary" className="upload">重新上传审批凭证</Button>
-                  <img className="thumb" src="../../images/serviseManagement.png" />
+                  <img className="thumb" src="../../images/yeoman.png" />
                 </div>
             </div>
           </div>
-        </div>
-      </Panel>
+        </Panel>
+      </div>
     )
 
   }

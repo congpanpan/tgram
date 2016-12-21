@@ -34,24 +34,32 @@
   .appDetailWrap{
   	height: 150px;
   	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .appDetail{
-  	float: left;
+  .appDetail{ 	
   	width: 18%;
-    margin: 15px;
+    margin-left: 15px;
   	p{
   		padding: 10px;
   		border-radius: 8px;
   		height: 64px;
+      line-height: 44px;
+      font-size: 20px;
+      background: #F3F5F4;
   		border: 1px solid #ddd;
   		span{
   			display: block;	
   		}
   	}
   	.specialP{
-  		line-height: 44px;
-    	font-size: 20px;
-    	background: #F3F5F4;
+  		border: none;
+      background: #51A7FA;
+      color: #fff;
+      margin-top: -20px;
+      font-size: 14px;
+      line-height: 24px;
   	}
   	span{
   		line-height: 20px;
@@ -66,25 +74,24 @@
   		color: #fff;
   	}
   }
-  .appClassWrap{
-  	.appClassItem{
-  		float: left;
-  		width: 33%;
-	    border: 1px solid #ddd;
-	    margin-left: -1px;
-	    margin-top: -1px;
-	    padding: 6px 12px;
-	    em{
-	    	font-style: normal;
-	    	float: right;
-	    	color: #51A7FA;
-	    }
-  	}
+  .appClassTable,.appSuggestTable{
+    border-collapse: collapse;
+    width: 100%;
+    td{
+      width: 35%;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 6px 12px;
+    }
+    span{
+      float: right;
+      color: #51A7FA;
+    }
   }
-  .appSuggestWrap{
-  	.appSuggestItem{
-  		color: #51A7FA;
-  	}
+  .appSuggestTable{
+    td{
+      color: #51A7FA;
+    }
   }
   .appAddWrap{
   	.appAddItem{
@@ -123,5 +130,15 @@
     td:nth-child(2),td:nth-child(4){
       padding-left: 10px;
     }
+  }
+  .keepModel{
+    margin-top: 15px;
+  }
+  h4{
+    line-height: 40px;
+    font-size: 16px;
+  }
+  .implementBt{
+    float: right;
   }
 }

@@ -44,7 +44,7 @@ export default class dataApp extends Component {
   render() {
     return (
       <Panel>
-        <div className="houseAddrList-tab">
+        <div className="dataApp-tab">
           <Tabs tabPosition="top" onChange={this._typeChange}>
             <TabPane tab="应用首页" key="list">
               <CardsComponent></CardsComponent>

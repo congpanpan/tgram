@@ -4,6 +4,7 @@ import { Table, Button, Tabs } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
 
+import CardsComponent from './cards/cards'
 
 const TabPane = Tabs.TabPane;
 
@@ -42,7 +43,9 @@ export default class info extends Component {
   render() {
     return (
       <Panel>
-        信息资源
+        <div className="hjt-infoResource">
+          <CardsComponent></CardsComponent>
+        </div>
       </Panel>
     )
 

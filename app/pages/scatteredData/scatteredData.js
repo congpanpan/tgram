@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Table, Button, Tabs } from 'antd'
+import { Table, Button, Tabs, Card, col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+
+import CardsComponent from './cards/cards'
 
 
 const TabPane = Tabs.TabPane;
@@ -30,7 +32,7 @@ export default class scatteredData extends Component {
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
-        title: `零散数据`,
+        title: `数据应用`,
         key: `/scatteredData`,
       }))
     }
@@ -42,7 +44,9 @@ export default class scatteredData extends Component {
   render() {
     return (
       <Panel>
-        零散数据
+        <div className="hjt-scatterData">
+          <CardsComponent></CardsComponent>
+        </div>
       </Panel>
     )
 

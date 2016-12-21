@@ -65,6 +65,12 @@ import {
 
 import searchContent from './containers/App/search/searchContent'
 
+//数据应用--黄建停
+import  appList  from './pages/dataApp/cards/component/appList'
+import  appNative  from './pages/dataApp/cards/component/appNative'
+import  appModel  from './pages/dataApp/cards/component/appModel'
+import  addNewModel  from './pages/dataApp/cards/component/addNewModel'
+import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
 
 /*进入路由的判断*/
 window.loginFlag = true
@@ -99,6 +105,13 @@ const routes = (
       {/***基础应用 结束*/}
 
       <Route path="/dataApp" component={dataApp} />
+      {/*数据应用-更多--黄建停*/}
+      <Route path="/dataApp/appList" component={appList} />
+      <Route path="/dataApp/appNative" component={appNative} />
+      <Route path="/dataApp/appModel" component={appModel} />
+      <Route path="/dataApp/addNewModel" component={addNewModel} />
+      <Route path="/dataApp/addNewNative" component={addNewNative} />
+      
       <Route path="/dataService" component={dataService} />
       <Route path="/info" component={info} />
       <Route path="/scatteredData" component={scatteredData} />

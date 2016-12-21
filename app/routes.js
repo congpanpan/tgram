@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 import {
@@ -75,6 +76,14 @@ import {
   logList, 
 } from './pages/index/log'
 
+import searchContent from './containers/App/search/searchContent'
+
+//数据应用--黄建停
+import  appList  from './pages/dataApp/cards/component/appList'
+import  appNative  from './pages/dataApp/cards/component/appNative'
+import  appModel  from './pages/dataApp/cards/component/appModel'
+import  addNewModel  from './pages/dataApp/cards/component/addNewModel'
+import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
 
 /*进入路由的判断*/
 window.loginFlag = true
@@ -107,7 +116,15 @@ const routes = (
       <Route path="/relation" component={relation} />
       {/***基础应用 结束*/}
 
+      
+      {/*数据应用-更多--黄建停*/}
       <Route path="/dataApp" component={dataApp} />
+      <Route path="/dataApp/appList" component={appList} />
+      <Route path="/dataApp/appNative" component={appNative} />
+      <Route path="/dataApp/appModel" component={appModel} />
+      <Route path="/dataApp/addNewModel" component={addNewModel} />
+      <Route path="/dataApp/addNewNative" component={addNewNative} />
+
       <Route path="/dataService" component={dataService} />
       <Route path="/info" component={info} />
       <Route path="/scatteredData" component={scatteredData} />
@@ -119,10 +136,12 @@ const routes = (
       <Route path="/talkList" component={talkList} />
       <Route path="/talkPage/:pageId" component={talkPage} />
       <Route path="/logList" component={logList} />
+
+      <Route path="/searchContent/:value" component={searchContent} />
     </Route>
 
     <Route path="/login" component={Login} />
   </Route>
 );
 
-export default routes;
+export default routes

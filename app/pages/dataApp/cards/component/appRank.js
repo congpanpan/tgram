@@ -3,7 +3,8 @@ import { Link } from 'react-router'
 import { Table, Row, Col, Button ,} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
-import  './appRank.less'
+import { updateTabList } from 'actions/tabList'
+import  './style.less'
 /*import {
   fetchRelyList,  
   } from 'actions/rely'*/
@@ -49,7 +50,13 @@ export default class TypeList extends Component {
   }
    // 组件已经加载到dom中
   componentDidMount() {//debugger
-    // this.props.dispatch(fetchRelyList({ currentPage: 1 ,pageSize: 10}))
+    if (this.props.params) {
+      // 若非嵌套，则执行
+      this.props.dispatch(updateTabList({
+        title: `应用列表`,
+        key: `/dataApp/appRank`,
+      }))
+    } 
   }
      // 表格展示项的配置
   columns() {

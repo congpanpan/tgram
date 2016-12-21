@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import { Table, Button, Tabs, Card, Col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
 
-import AppRank from './Component/appRank'
+import AppRank from './component/appRank'
 
 import  './cards.less'
 
@@ -30,20 +31,13 @@ export default class cards extends Component {
 
   // 组件已经加载到dom中
   componentDidMount() {
-    if (this.props.params) {
-      // 若非嵌套，则执行
-      this.props.dispatch(updateTabList({
-        title: `数据应用`,
-        key: `/dataApp`,
-      }))
-    }
-
-    
+     
   }
   allAppTitle(){
     return(
         <p className="allAppTitle">
-          <span>全部应用</span><span className="moreBt">更多</span>
+          <span>全部应用</span>
+          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
@@ -57,21 +51,24 @@ export default class cards extends Component {
   appSuggestTitle(){
     return(
         <p className="allAppTitle">
-          <span>全部推荐</span><span className="moreBt">更多</span>
+          <span>全部推荐</span>
+          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
   appAddTitle(){
     return(
         <p className="allAppTitle">
-          <span>新增应用</span><span className="moreBt">更多</span>
+          <span>新增应用</span>
+          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
   appRankTitle(){
     return(
         <p className="allAppTitle">
-          <span>应用排行</span><span className="moreBt">更多</span>
+          <span>应用排行</span>
+          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
@@ -83,18 +80,22 @@ export default class cards extends Component {
             <Card title={this.allAppTitle()} >
               <div className="appDetailWrap">
                 <div className="appDetail">
-                  <p className="specialP">46</p>
-                  <span>原生应用</span>
+                  <p className="specialP">46</p> 
+                    <span><Link to={`/dataApp/appNative`}>原生应用</Link></span>
                 </div>
                 <div className="appDetail">
                   <p className="specialP">4</p>
-                  <span>原生应用</span>
+                  <span><Link to={`/dataApp/appModel`}>模型应用</Link></span>
                 </div>
                 <div className="appDetail specialAppDetail">
-                  <p>新增<span>原生应用</span></p>
+                  <p>
+                    <Link to={`/dataApp/addNewNative`}>新增<span>原生应用</span></Link>
+                  </p>
                 </div>
                 <div className="appDetail specialAppDetail">
-                  <p>新增<span>模型</span></p>
+                  <p>
+                    <Link to={`/dataApp/addNewModel`}>新增<span>模型</span></Link>
+                  </p>                 
                 </div>
               </div>
             </Card>
@@ -104,27 +105,27 @@ export default class cards extends Component {
               <ul className="appClassWrap">
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>
                 <li className="appClassItem">
                   <span>数据碰撞</span>
-                  <em>17</em>
+                  <em><Link to={`/dataApp/appList`}>17</Link></em>
                 </li>    
               </ul>
             </Card>

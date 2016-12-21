@@ -213,7 +213,6 @@ export default class welcome extends Component {
   }
 
   _tabChange(key){
-    console.log(key)
     this.setState({more: key})
   }
 

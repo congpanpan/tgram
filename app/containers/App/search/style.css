@@ -1,0 +1,76 @@
+.groupCardImg{
+	width:160px;
+	height:190px;
+}
+
+.listCardImg{
+	width:60px;
+	height:75px;
+}
+.listCard span{
+	display: inline-block;
+	margin:5px 5px 5px 0px;
+}
+.groupCard span{
+	display: inline-block;
+	margin:5px 5px 5px 0px;
+}
+.listCard img{
+
+}
+.search{
+	position: absolute;
+	width: 100%
+}
+.search .ant-row{
+	margin-top: 10px;
+}
+.searchInput {
+	width: 60% !important;
+}
+.searchContent-lzr{
+	background-color: #fff;
+	padding-top: 20px;
+}
+.searchContent-lzr .searchType{
+	width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #F38F17;
+    position: relative;
+}
+.searchContent-lzr .searchType .close-icon{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	right: 10px;
+	top:10px;
+	margin-top: -20px;
+	/*display: none;*/
+}
+
+.searchContent-lzr .searchType .close-icon :hover{
+	cursor:pointer;
+	/*display: block;*/
+}
+.searchContent-lzr .searchType span{
+	display: inline-block;
+	font-size:14px;
+}
+.searchContent-lzr .searchContent1{
+	line-height: 32px;
+}
+.searchContent2{
+	line-height: 32px;
+}
+.searchContent-lzr .ant-tabs{
+	position: absolute;
+    top: -40px;
+    right: 10px;
+}
+.searchContent-lzr .handleBtn{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}

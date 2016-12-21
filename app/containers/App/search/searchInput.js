@@ -23,7 +23,7 @@ export default class searchInput extends Component{
 				<Button>选择数据</Button>
 				<Input className='searchInput' size='large' value={this.state.value} onChange={this.changeText}/>
 				<Button>
-					<Link to={`/searchContent/${this.state.value}`}>搜索</Link>
+					<Link to={`/searchContent/${1}`}>搜索</Link>
 				</Button>
 			</div>
 		)

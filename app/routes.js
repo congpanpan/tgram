@@ -77,6 +77,7 @@ import {
 } from './pages/index/log'
 
 import searchContent from './containers/App/search/searchContent'
+import searchConverge from './containers/App/search/converge/index'
 
 //数据应用--黄建停
 import  appList  from './pages/dataApp/cards/component/appList'
@@ -140,6 +141,7 @@ const routes = (
       <Route path="/logList" component={logList} />
 
       <Route path="/searchContent/:value" component={searchContent} />
+      <Route path="/searchConverge/:value" component={searchConverge} />
     </Route>
 
     <Route path="/login" component={Login} />

@@ -142,25 +142,62 @@ export default class TypeList extends Component {
               <td>应用名称</td>
               <td><input type="text" placeholder="应用名称"/></td>
               <td>应用分类</td>
+<<<<<<< HEAD
               <td>应用分类</td>
+=======
+              <td>
+                <Select placeholder="交通警察支队指挥中心">
+                  <Option value="11">交通警察支队指挥中心1</Option>
+                  <Option value="22">交通警察支队指挥中心2</Option>
+                  <Option value="33">交通警察支队指挥中心3</Option>
+                </Select>
+              </td>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
             </tr>
             <tr>
               <td>应用说明</td>
               <td><input type="text" placeholder="应用说明"/></td>
+<<<<<<< HEAD
               <td>应用分类</td>
               <td>应用分类</td>
+=======
+              <td>应用类别</td>
+              <td>
+                <Select placeholder="交通警察支队指挥中心">
+                  <Option value="11">交通警察支队指挥中心1</Option>
+                  <Option value="22">交通警察支队指挥中心2</Option>
+                  <Option value="33">交通警察支队指挥中心3</Option>
+                </Select>
+              </td>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
             </tr>
             <tr>
               <td>访问地址</td>
               <td><input type="text" placeholder="访问地址"/></td>
+<<<<<<< HEAD
               <td>应用分类</td>
               <td>应用分类</td>
+=======
+              <td>版本号</td>
+              <td><input type="text" placeholder="版本号"/></td>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
             </tr>
             <tr>
               <td>显示数据</td>
               <td><input type="text" placeholder="显示数据"/></td>
+<<<<<<< HEAD
               <td>应用分类</td>
               <td>应用分类</td>
+=======
+              <td>应用开发所属阶段</td>
+              <td>
+                <Select placeholder="交通警察支队指挥中心">
+                  <Option value="11">交通警察支队指挥中心1</Option>
+                  <Option value="22">交通警察支队指挥中心2</Option>
+                  <Option value="33">交通警察支队指挥中心3</Option>
+                </Select>
+              </td>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
             </tr>
             <tr>
               <td>应用开发管辖单位编码</td>
@@ -171,17 +208,31 @@ export default class TypeList extends Component {
                   <Option value="33">交通警察支队指挥中心3</Option>
                 </Select>
               </td>
+<<<<<<< HEAD
               <td>应用分类</td>
               <td>应用分类</td>
+=======
+              <td>应用开发管辖单位名称</td>
+              <td>00000001111</td>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
             </tr>
             <tr>
               <td>应用开发管辖单位联系人</td>
               <td><input type="text" placeholder="应用开发管辖单位联系人"/></td>
+<<<<<<< HEAD
               <td>应用分类</td>
               <td>应用分类</td>
             </tr>
           </tbody>
         </table>
+=======
+              <td>应用开发管辖单位联系电话</td>
+              <td><input type="text" placeholder="应用开发管辖单位联系电话"/></td>
+            </tr>
+          </tbody>
+        </table>
+        <div className="keepModel"><Button type="primary" >保存模型</Button></div>
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
       </div>
        
     )

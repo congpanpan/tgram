@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
+import { Table, Row, Col, Button ,Form,Select,Input,Pagination,Rate} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
@@ -34,8 +34,6 @@ export default class TypeList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentPage: 1,
-      pageSize: 10,
       list:[
         {
           appName: '数印搜索', 
@@ -69,8 +67,8 @@ export default class TypeList extends Component {
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
-        title: `新增模型`,
-        key: `/dataApp/addNewModel`,
+        title: `应用属性`,
+        key: `/dataApp/appAttribute`,
       }))
     } 
   }
@@ -124,58 +122,57 @@ export default class TypeList extends Component {
       },
     ]
   }
- 
   render() {
     const {
             relyListSearchResult,
             peopleSituationResult
         } = this.props
-    const formItemLayout = {
-      labelCol: { span: 6 },
-      wrapperCol: { span: 14 },
-    };
     return (
-      <div className="tableWrap" >
-        <div  className="addNativeWrap">
-          <h4>新建模型应用</h4>
-          <table>
-            <tbody>
-              <tr>
-                <td>应用名称</td>
-                <td><input type="text" placeholder="应用名称"/></td>
-                <td>应用分类</td>
-                <td>
-                  <Select placeholder="交通警察支队指挥中心">
-                    <Option value="11">交通警察支队指挥中心1</Option>
-                    <Option value="22">交通警察支队指挥中心2</Option>
-                    <Option value="33">交通警察支队指挥中心3</Option>
-                  </Select>
-                </td>
-              </tr>
-              <tr>
-                <td>应用说明</td>
-                <td colSpan='3'><input type="text" placeholder="应用说明"/></td>
-              </tr>
-            </tbody>
-          </table>   
-        </div>
-        <div className="appRankWrap">
-          <Table 
-            columns={this.columns()} 
-            dataSource={this.state.list}
-            pagination={false}
-            bordered
-          />
-        </div>
-        <div className="keepModel">
-          <Button type="primary" className="addModelBt" >新增数据</Button>
-          <Button type="primary" className="addModelBt" >新增常量</Button>
-          <Button type="primary" className="addModelBt" >新增变量</Button>
-          <Button type="primary" className="addModelBt" >新增字段</Button>
-          <Button type="primary" className="addModelBt" >保存模型</Button>
-        </div>
+      <div  className="addNativeWrap">
+        <h4>应用属性</h4>
+        {/*<Table 
+          columns={this.columns()} 
+          dataSource={this.state.list}
+          pagination={false}
+          bordered
+        /> */}
+        <table>
+          <tbody>
+            <tr>
+              <td>应用名称</td>
+              <td>地铁高频人员信息</td>
+              <td>应用类别</td>
+              <td>原生应用</td>
+            </tr>
+            <tr>
+              <td>制作单位</td>
+              <td>科技通讯管理局</td>
+              <td>制作人</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>应用分类</td>
+              <td>
+                <Select placeholder="交通警察支队指挥中心">
+                  <Option value="11">交通警察支队指挥中心1</Option>
+                  <Option value="22">交通警察支队指挥中心2</Option>
+                  <Option value="33">交通警察支队指挥中心3</Option>
+                </Select>
+              </td>
+              <td>应用说明</td>
+              <td>地铁高频人员信息</td>
+            </tr>
+            <tr>
+              <td>访问地址</td>
+              <td>www.12306.com<Button type="primary" className="implementBt">执行应用</Button></td>
+              <td>审核状态</td>
+              <td>通过</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div className="keepModel"><Button type="primary" >保存模型</Button></div>
       </div>
-      
        
     )
   }

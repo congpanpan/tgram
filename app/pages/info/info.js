@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Table, Button, Tabs } from 'antd'
@@ -58,3 +59,4 @@ export default class info extends Component {
 
   }
 }
+

@@ -1,5 +1,6 @@
 import React ,{Component} from 'react'
 import {Row,Col,Icon} from 'antd'
+import { Link } from 'react-router'
 
 export default class groupCard extends Component{
 	constructor(props,context){
@@ -14,7 +15,9 @@ export default class groupCard extends Component{
 		return(
 			<Row className='groupCard'>
 				<Col span={24}>
-					<img className='groupCardImg'/>
+					<Link to={`/searchConverge/${this.state.value}`}>
+						<img className='groupCardImg'/>
+					</Link>
 				</Col>
 				<Col span={24}>
 					<Row>

@@ -5,6 +5,8 @@ import { Table, Button, Tabs, Card, Col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import AppRank from './component/appRank'
 
+import KeyWordStatis from './component/keyWordStatis'
+
 import  './cards.less'
 
 
@@ -206,6 +208,13 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>全部新增数据</span>
+        </p>
+    )
+  }
+  yNewDataTitle(){
+    return(
+        <p className="allAppTitle">
+          <span>昨日新增数据</span>
           <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
@@ -221,23 +230,50 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>全部推荐</span>
+        </p>
+    )
+  }
+  nowDataTitle(){
+    return(
+        <p className="allAppTitle">
+          <span>数据实时性监测</span>
+
           <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
+
   appAddTitle(){
     return(
         <p className="allAppTitle">
           <span>数据实时性监测</span>
+        </p>
+      )
+  }
+
+  tNewDataTitle(){
+    return(
+        <p className="allAppTitle">
+          <span>今日新增数据</span>
+          <span className="newDataStatis"><em>85</em>个数据表，<em>12334123</em>条记录</span>
           <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
+
   appRankTitle(){
     return(
         <p className="allAppTitle">
           <span>七日关键词排行</span>
           <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+        </p>
+      )
+  }
+
+  weekKeyTitle(){
+    return(
+        <p className="allAppTitle">
+          <span>七日关键词排行</span>
         </p>
       )
   }
@@ -326,9 +362,12 @@ export default class cards extends Component {
               <AppRank></AppRank>
             </Card>
           </Col> 
-        </Row>   
+        </Row> 
       </div>
     )
-
   }
+
+
+  
+  
 }

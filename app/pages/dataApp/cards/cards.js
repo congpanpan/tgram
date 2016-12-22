@@ -80,20 +80,20 @@ export default class cards extends Component {
             <Card title={this.allAppTitle()} >
               <div className="appDetailWrap">
                 <div className="appDetail">
-                  <p className="specialP">46</p> 
+                  <p>46</p> 
                     <span><Link to={`/dataApp/appNative`}>原生应用</Link></span>
                 </div>
                 <div className="appDetail">
-                  <p className="specialP">4</p>
+                  <p>4</p>
                   <span><Link to={`/dataApp/appModel`}>模型应用</Link></span>
                 </div>
                 <div className="appDetail specialAppDetail">
-                  <p>
+                  <p className="specialP">
                     <Link to={`/dataApp/addNewNative`}>新增<span>原生应用</span></Link>
                   </p>
                 </div>
                 <div className="appDetail specialAppDetail">
-                  <p>
+                  <p className="specialP">
                     <Link to={`/dataApp/addNewModel`}>新增<span>模型</span></Link>
                   </p>                 
                 </div>
@@ -102,53 +102,48 @@ export default class cards extends Component {
           </Row>
           <Row>
             <Card title={this.appClassTitle()} >
-              <ul className="appClassWrap">
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>
-                <li className="appClassItem">
-                  <span>数据碰撞</span>
-                  <em><Link to={`/dataApp/appList`}>17</Link></em>
-                </li>    
-              </ul>
+              <table className="appClassTable">
+                <tbody>
+                  <tr>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                  </tr>
+                  <tr>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                  </tr>
+                  <tr>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
+                  </tr>
+                </tbody>
+              </table>
             </Card>
           </Row> 
           <Row>
             <Card title={this.appSuggestTitle()} >
-              <ul className="appClassWrap appSuggestWrap">
-                <li className="appClassItem appSuggestItem">
-                  <span>地铁高频人员信息</span>
-                </li>
-                <li className="appClassItem appSuggestItem">
-                  <span>地铁高频人员信息</span>
-                </li>
-                <li className="appClassItem appSuggestItem">
-                  <span>地铁高频人员信息</span>
-                </li>
-                <li className="appClassItem appSuggestItem">
-                  <span>地铁高频人员信息</span>
-                </li>
-                <li className="appClassItem appSuggestItem">
-                  <span>地铁高频人员信息</span>
-                </li>
-              </ul>
+              <table className="appSuggestTable">
+                <tbody>
+                  <tr>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                  </tr>
+                  <tr>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                  </tr>
+                  <tr>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                  </tr>
+                </tbody>
+              </table>
             </Card>
           </Row>  
         </Col>

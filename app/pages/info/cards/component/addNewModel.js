@@ -124,6 +124,7 @@ export default class TypeList extends Component {
       },
     ]
   }
+<<<<<<< HEAD
   //page改变的调用
   pageChange(currentPage) {
     console.log(currentPage);
@@ -147,6 +148,9 @@ export default class TypeList extends Component {
   showTotal(){
     return `共 ${30} 条`
   }
+=======
+ 
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
   render() {
     const {
             relyListSearchResult,
@@ -157,6 +161,7 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
+<<<<<<< HEAD
       <div  className="appRankWrap">
         <Form onSubmit={this.handleSubmit}>      
           <FormItem
@@ -197,6 +202,49 @@ export default class TypeList extends Component {
           />
         </div> 
       </div>
+=======
+      <div className="tableWrap" >
+        <div  className="addNativeWrap">
+          <h4>新建模型应用</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td>应用名称</td>
+                <td><input type="text" placeholder="应用名称"/></td>
+                <td>应用分类</td>
+                <td>
+                  <Select placeholder="交通警察支队指挥中心">
+                    <Option value="11">交通警察支队指挥中心1</Option>
+                    <Option value="22">交通警察支队指挥中心2</Option>
+                    <Option value="33">交通警察支队指挥中心3</Option>
+                  </Select>
+                </td>
+              </tr>
+              <tr>
+                <td>应用说明</td>
+                <td colSpan='3'><input type="text" placeholder="应用说明"/></td>
+              </tr>
+            </tbody>
+          </table>   
+        </div>
+        <div className="appRankWrap">
+          <Table 
+            columns={this.columns()} 
+            dataSource={this.state.list}
+            pagination={false}
+            bordered
+          />
+        </div>
+        <div className="keepModel">
+          <Button type="primary" className="addModelBt" >新增数据</Button>
+          <Button type="primary" className="addModelBt" >新增常量</Button>
+          <Button type="primary" className="addModelBt" >新增变量</Button>
+          <Button type="primary" className="addModelBt" >新增字段</Button>
+          <Button type="primary" className="addModelBt" >保存模型</Button>
+        </div>
+      </div>
+      
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
        
     )
   }

@@ -70,7 +70,11 @@ export default class TypeList extends Component {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
         title: `应用列表`,
+<<<<<<< HEAD
         key: `/dataApp/appRank`,
+=======
+        key: `/dataApp/appList`,
+>>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
       }))
     } 
   }

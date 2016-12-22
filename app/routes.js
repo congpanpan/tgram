@@ -77,6 +77,7 @@ import {
 } from './pages/index/log'
 
 import searchContent from './containers/App/search/searchContent'
+import searchConverge from './containers/App/search/converge/index'
 
 //数据应用--黄建停
 import  appList  from './pages/dataApp/cards/component/appList'
@@ -84,6 +85,7 @@ import  appNative  from './pages/dataApp/cards/component/appNative'
 import  appModel  from './pages/dataApp/cards/component/appModel'
 import  addNewModel  from './pages/dataApp/cards/component/addNewModel'
 import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
+import  appAttribute  from './pages/dataApp/cards/component/appAttribute'
 
 /*进入路由的判断*/
 window.loginFlag = true
@@ -124,6 +126,7 @@ const routes = (
       <Route path="/dataApp/appModel" component={appModel} />
       <Route path="/dataApp/addNewModel" component={addNewModel} />
       <Route path="/dataApp/addNewNative" component={addNewNative} />
+      <Route path="/dataApp/appAttribute" component={appAttribute} />
 
       <Route path="/dataService" component={dataService} />
       <Route path="/info" component={info} />
@@ -138,6 +141,7 @@ const routes = (
       <Route path="/logList" component={logList} />
 
       <Route path="/searchContent/:value" component={searchContent} />
+      <Route path="/searchConverge/:value" component={searchConverge} />
     </Route>
 
     <Route path="/login" component={Login} />

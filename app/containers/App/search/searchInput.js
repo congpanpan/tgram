@@ -30,7 +30,7 @@ export default class searchInput extends Component{
 				<Button onClick={this.select}>选择数据</Button>
 				<Input className='searchInput' size='large' value={this.state.value} onChange={this.changeText}/>
 				<Button>
-					<Link to={`/searchContent/${this.state.value}`}>搜索</Link>
+					<Link to={`/searchContent/${1}`}>搜索</Link>
 				</Button>
 				<Gsearch handleSelect={this.select} status={this.state.selectShow}/>
 			</div>

@@ -11,16 +11,17 @@
 		padding: 10px;
 	}
 	.ant-card-bordered{
-		height: 200px;
+		height: 228px;
 	}
 	.ant-row {
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-top: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
   }
   .specialRow{
   	.ant-card-bordered{
-			height: 410px;
+			height: 472px;
 		}
   }
   .ant-card-head{
@@ -44,7 +45,7 @@
     align-items: center;
   }
   .appDetail{ 	
-  	width: 18%;
+  	min-width: 18%;
     margin-left: 15px;
   	p{
   		padding: 10px;
@@ -80,13 +81,20 @@
   	}
   }
   .appClassTable,.appSuggestTable{
+    border: 1px solid #eee;
     border-collapse: collapse;
     width: 100%;
-    td{
+    tr:nth-of-type(odd){background-color: #f9f9f9;}
+    tr:hover{background-color: #f5f5f5;}
+    /*td{
       width: 35%;
       background: #fff;
       border: 1px solid #ddd;
       padding: 6px 12px;
+    }*/
+    td{ 
+      padding:8px 12px;
+      border-right: 1px dashed #d7f3ff;
     }
     span{
       float: right;
@@ -98,13 +106,20 @@
       color: #51A7FA;
     }
   }
-  .appAddWrap{
+  .appAddTable{
+    width: 100%;
+    tr:nth-of-type(odd){background-color: #f9f9f9;}
+    tr:hover{background-color: #f5f5f5;}   
   	.appAddItem{
   		border-bottom: 1px dashed #ccc;
     	padding: 4px 0;
     	.appAddName{
     		color: #51A7FA;
+        padding: 0 6px;
     	}
+      .whichApp{
+        padding-left: 10px;
+      }
   	}
   }
 }
@@ -146,5 +161,60 @@
   }
   .implementBt{
     float: right;
+  }
+  .userValue{
+    margin-top: 20px;
+    .ant-rate{
+      height: 24px;
+      line-height: 24px;
+    }
+    .ant-rate-star:before, .ant-rate-star-content:before{
+      font-size: 14px;
+    }
+    p{ 
+      height: 24px;
+      line-height: 24px;
+      span:nth-child(1){
+        font-size: 16px;
+        font-weight: bold;
+        padding-right: 20px;
+      }
+      span:nth-child(2){
+        font-size: 12px;
+        border: 1px solid #ddd;
+        padding: 3px;
+      }
+    }
+    .userValueText{
+      display: block;
+      width: 95%;
+    }
+  }
+  .userValueList{
+    margin-top: 10px;
+    .userValueItem{
+      border-bottom: 1px dashed #ccc;
+      .ant-rate{
+        height: 24px;
+        line-height: 24px;
+      }
+      .ant-rate-star:before, .ant-rate-star-content:before{
+        font-size: 12px;
+      }
+      .valueTime{
+        height: 24px;
+        span{
+          padding-left: 10px;
+          em{
+            font-style: normal;
+            padding-left: 5px;
+          }
+        }
+      }
+      .valueNumber{
+        height: 24px;
+        padding-left: 10px;
+      }
+    }
   }
 }

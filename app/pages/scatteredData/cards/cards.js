@@ -26,6 +26,63 @@ export default class cards extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      appClassData:[
+        {
+          id: 1,
+          title: '数据碰撞1',
+          number: '11'
+        },
+        {
+          id: 2,
+          title: '数据碰撞2',
+          number: '22'
+        },
+        {
+          id: 3,
+          title: '数据碰撞3',
+          number: '33'
+        },
+        {
+          id: 4,
+          title: '数据碰撞4',
+          number: '44'
+        }
+      ],
+      appAddData:[
+        {
+          id: 1,
+          time: '13:14:15',
+          name: '霍建华',
+          describe: '上传',
+          detail: '明星',
+          from: '情报中心',
+          place: '杭州',
+          fromData: '人员：身份信息类零散数据',
+          number: '2121',
+        },
+        {
+          id: 2,
+          time: '13:14:15',
+          name: '霍建华',
+          describe: '上传',
+          detail: '明星',
+          from: '情报中心',
+          place: '杭州',
+          fromData: '人员：身份信息类零散数据',
+          number: '2121',
+        },
+        {
+          id: 3,
+          time: '13:14:15',
+          name: '霍建华',
+          describe: '上传',
+          detail: '明星',
+          from: '情报中心',
+          place: '杭州',
+          fromData: '人员：身份信息类零散数据',
+          number: '2121',
+        },
+      ],
     }
   }
 
@@ -33,7 +90,7 @@ export default class cards extends Component {
   componentDidMount() {
      
   }
-  yNewDataTitle(){
+  allAppTitle(){
     return(
         <p className="allAppTitle">
           <span>全部新增零散数据</span>
@@ -57,7 +114,7 @@ export default class cards extends Component {
         </p>
       )
   }
-  tNewDataTitle(){
+  appAddTitle(){
     return(
         <p className="allAppTitle">
           <span>今日新增零散数据</span>
@@ -66,129 +123,111 @@ export default class cards extends Component {
         </p>
       )
   }
-  weekKeyTitle(){
+  appRankTitle(){
     return(
         <p className="allAppTitle">
-          <span>零散数据地域分布</span>
+          <span>零散数据地域分类</span>
           <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
         </p>
       )
   }
   render() {
+    // console.log(this.state.appClassData)
+    const appClassTd = this.state.appClassData.map((item, index) => {
+      return (
+        <tr key={index}>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+        </tr>
+      )
+    })
+    const appAddTd = this.state.appAddData.map((item, index) => {
+      return (
+        <tr key={index}>
+          <td className="appAddItem">
+            <span>{item.time}</span>
+            <span>{item.name}</span>
+            <span>{item.describe}</span>
+            <span>{item.describe}</span>
+            <span>{item.detail}</span>
+            <span >{item.from}</span>
+            <span >{item.place}</span>
+            <span>{item.fromData}</span>&nbsp;&nbsp;
+            记录数:<span>{item.number}</span>
+          </td>
+        </tr>
+      )
+    })
     return (
-      <div className="scatterData">
+      <div className="hjt-scatterData">
         <Col span="12">
           <Row>
-            <Card title={this.yNewDataTitle()} >
+            <Card title={this.allAppTitle()} >
               <div className="appDetailWrap">
                 <div className="appDetail">
-                  <p>46232</p> 
+                  <p>46</p> 
                     <span><Link to={`/dataApp/appNative`}>数据表数</Link></span>
                 </div>
                 <div className="appDetail">
-                  <p>48765435</p>
+                  <p>4</p>
                   <span><Link to={`/dataApp/appModel`}>记录条数</Link></span>
                 </div>
-                <div className="appDetail">
-                  <p className="specialP">导入数据</p>
+                <div className="appDetail specialAppDetail">
+                  <p className="specialP">
+                    <Link to={`/dataApp/addNewNative`}>导入数据</Link>
+                  </p>
                 </div>
               </div>
-              <p className="dataStatic">
-                <span>正在导入：<em>0</em>个</span>&nbsp;&nbsp;
-                <span>正在建立索引：<em>0</em>个</span>&nbsp;&nbsp;
-                <span>当前用户已导入：<em>0</em>个</span>
-              </p>
             </Card>
           </Row>
           <Row>
             <Card title={this.appClassTitle()} >
-              <table className="unitTable">
-                <tbody>
-                  <tr>
-                    <td>人员：身份信息<span>3221</span></td>
-                    <td>其他：社会信息<span>3221</span></td>
-                    <td>车辆：动态轨迹<span>3221</span></td>
-                  </tr>
-                  <tr>
-                    <td>车辆：等级信息<span>3221</span></td>
-                    <td>单位：基本信息<span>3221</span></td>
-                    <td>记录：邮政寄递<span>3221</span></td>
-                  </tr>
-                  <tr>
-                    <td>车辆：等级信息<span>3221</span></td>
-                    <td>单位：基本信息<span>3221</span></td>
-                    <td>记录：邮政寄递<span>3221</span></td>
-                  </tr>
-                </tbody>
-              </table>
+              <table className="appClassTable">
+                <tbody>{appClassTd}</tbody>
+              </table> 
             </Card>
           </Row> 
           <Row>
             <Card title={this.appSuggestTitle()} >
-              <table className="unitTable">
+              <table className="appSuggestTable tbl tbl-log">
                 <tbody>
                   <tr>
-                    <td>西湖区分局<span>3221</span></td>
-                    <td>办公室<span>3221</span></td>
-                    <td>余杭区分局<span>3221</span></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
                   </tr>
                   <tr>
-                    <td>科技信息化局<span>3221</span></td>
-                    <td>胡政支队<span>3221</span></td>
-                    <td>建德市公安局<span>3221</span></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
                   </tr>
                   <tr>
-                    <td>禁毒支队<span>3221</span></td>
-                    <td>情报中心<span>3221</span></td>
-                    <td>版本号<span>3221</span></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
                   </tr>
                 </tbody>
               </table>
             </Card>
-          </Row> 
+          </Row>  
         </Col>
         <Col span="12" className="rightCol">
           <Row>
-            <Card  title={this.tNewDataTitle()} >
-              <ul className="appAddWrap">
-                <li className="appAddItem">
-                  <span className="appAddName">
-                    <em>14:17</em>&nbsp;&nbsp;
-                    <em>霍建华</em>&nbsp;&nbsp;
-                    <em>明星对比数据</em>&nbsp;&nbsp;
-                    <em>情报中心</em>&nbsp;&nbsp;
-                    <em>杭州</em>&nbsp;&nbsp;
-                    <em>人员：身份信息类零散数据</em>&nbsp;&nbsp;
-                    记录数：<em>6544</em>
-                  </span>
-                </li>
-                <li className="appAddItem">
-                  <span className="appAddName">
-                    <em>14:17</em>&nbsp;&nbsp;
-                    <em>霍建华</em>&nbsp;&nbsp;
-                    <em>明星对比数据</em>&nbsp;&nbsp;
-                    <em>情报中心</em>&nbsp;&nbsp;
-                    <em>杭州</em>&nbsp;&nbsp;
-                    <em>人员：身份信息类零散数据</em>&nbsp;&nbsp;
-                    记录数：<em>6544</em>
-                  </span>
-                </li>
-                <li className="appAddItem">
-                  <span className="appAddName">
-                    <em>14:17</em>&nbsp;&nbsp;
-                    <em>霍建华</em>&nbsp;&nbsp;
-                    <em>明星对比数据</em>&nbsp;&nbsp;
-                    <em>情报中心</em>&nbsp;&nbsp;
-                    <em>杭州</em>&nbsp;&nbsp;
-                    <em>人员：身份信息类零散数据</em>&nbsp;&nbsp;
-                    记录数：<em>6544</em>
-                  </span>
-                </li>
-              </ul>
+            <Card  title={this.appAddTitle()} >
+              <table className="appAddTable">
+                <tbody>{appAddTd}</tbody>
+              </table> 
             </Card>
           </Row>
           <Row className="specialRow">
-            <Card title={this.weekKeyTitle()} >
+            <Card title={this.appRankTitle()} >
               <ChinaMap></ChinaMap>
             </Card>
           </Row> 

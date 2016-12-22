@@ -24,9 +24,9 @@ export default class dataApp extends Component {
     super(props)
     this.state = {
       dataSource:[
-        {key:'01',xm:'组织机构查询接口',policeNumber:'匡信科技 李某某',institutions:'10',sq:'7'},
-        {key:'02',xm:'机动车查询接口',policeNumber:'匡信科技 李某某',institutions:'5',sq:'8'},
-        {key:'03',xm:'组织机构查询接口',policeNumber:'匡信科技 李某某',institutions:'10',sq:'7'},
+        {key:'01',xm:'组织机构查询接口',policeNumber:'七巧板 李某某',institutions:'10',sq:'7'},
+        {key:'02',xm:'机动车查询接口',policeNumber:'七巧板 李某某',institutions:'5',sq:'8'},
+        {key:'03',xm:'组织机构查询接口',policeNumber:'七巧板 李某某',institutions:'10',sq:'7'},
        
       ]
     }
@@ -81,7 +81,7 @@ export default class dataApp extends Component {
     return (
       <Panel>
         <div>
-        	<Row>
+        	<Row gutter={16}>
         		<Col span={12}>
         		{/*  <DemoBox value={}></DemoBox>*/}
         		  <div className='service-div-cpp'>
@@ -136,25 +136,25 @@ export default class dataApp extends Component {
                       <span className='service-img-cpp'></span>
 	        		  		   <a>人员核查接口(警务通)</a>
 	        		  		   <span><Icon type="star-o"/>sdfg</span>
-	        		  		   <a className='more-cpp'>匡信科技</a>
+	        		  		   <a className='more-cpp'>七巧板</a>
 	        		  		</li>
                     <li>
                       <span className='service-img-cpp'></span>
                        <a>人员核查接口(警务通)</a>
                        <span><Icon type="star-o"/>sdfg</span>
-                       <a className='more-cpp'>匡信科技</a>
+                       <a className='more-cpp'>七巧板</a>
                     </li>
                     <li>
                       <span className='service-img-cpp'></span>
                        <a>人员核查接口(警务通)</a>
                        <span><Icon type="star-o"/>sdfg</span>
-                       <a className='more-cpp'>匡信科技</a>
+                       <a className='more-cpp'>七巧板</a>
                     </li>
                     <li>
                       <span className='service-img-cpp'></span>
                        <a>人员核查接口(警务通)</a>
                        <span><Icon type="star-o"/>sdfg</span>
-                       <a className='more-cpp'>匡信科技</a>
+                       <a className='more-cpp'>七巧板</a>
                     </li>
 	        		  	</ul>
         		    </div>

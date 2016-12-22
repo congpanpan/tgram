@@ -1,21 +1,22 @@
 .service-div-cpp{
 	border:solid #d6d6d6 1px;
 	height: 200px;
-	margin:10px;
+	margin:0 0 15px 0;
 }
 .service-bigDiv-cpp{
 	border:solid #d6d6d6 1px;
-	height: 400px;
-	margin:10px;
+	height: 415px;
+	margin:0 0 15px 0;
 }
 .div-title-cpp{
 	font-size: 14px;
+	display: inline-block;
 	color: black;
 	padding: 10px;
 }
 .more-cpp {
 	float: right;
-	padding: 5px;
+	padding: 10px;
 }
 .add-service-cpp span,.add-service-cpp a{
 	margin: 10px;

@@ -276,7 +276,7 @@ export default class welcome extends Component {
         <Panel>
           <Row gutter={16}>
             <Col span={12} className="box">
-              <Card title="常用应用" extra={<a href="javascript:void:;">更多</a>}>
+              <Card title="常用应用" extra={<Link to={`/dataApp/appList`}>更多</Link>}>
                 <ul className="icons clearfix">
                   {appList}
                 </ul>

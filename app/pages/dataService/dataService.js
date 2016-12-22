@@ -63,7 +63,6 @@ export default class dataService extends Component {
       </Menu>
       )
     return (
-      <Panel>
         <div className="list-tab">
           <Tabs tabPosition="top" onChange={this._typeChange}>
             <TabPane tab="服务首页" key="1" >
@@ -84,7 +83,6 @@ export default class dataService extends Component {
             </TabPane>
           </Tabs>
         </div>
-      </Panel>
     )
 
   }

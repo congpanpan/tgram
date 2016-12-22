@@ -53,7 +53,8 @@ export default class newdata extends Component {
             show: true,
             textStyle:{
                 fontSize:'14',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                fontFamily: 'Open Sans'
             },
             padding:[15, 10, 10, 10]
         },

@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Table, Button, Tabs } from 'antd'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 import Panel from 'components/panel'
+import CardsComponent from './cards/cards'
 
-
-const TabPane = Tabs.TabPane;
+const TabPane = Tabs.TabPane
 
 
 
@@ -23,6 +24,7 @@ export default class info extends Component {
     super(props)
     this.state = {
     }
+    this.updateState = this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -38,12 +40,20 @@ export default class info extends Component {
     
   }
 
+  updateState(){
+    this.setState({})
+  }
 
   render() {
     return (
-      <Panel>
-        信息资源
-      </Panel>
+      <div className="body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <WindowSize updateState={this.updateState}/>
+        <Panel>
+          <div className="houseAddrList-tab">
+              <CardsComponent></CardsComponent>
+          </div>
+        </Panel>
+      </div>
     )
 
   }

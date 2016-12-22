@@ -40,14 +40,15 @@ export default class apppop extends Component {
     const theme = _self.props.theme ? _self.props.theme : 'macarons'
     const option = {
         title : {
-            text: '未来一周气温变化',
+            text: '入杭人员分析',
             subtext: 'tgram'
         },
         tooltip : {
             trigger: 'axis'
         },
         legend: {
-            data:['最高气温','最低气温']
+            data:['最高气温','最低气温'],
+            show: false
         },
         toolbox: {
             show : true,

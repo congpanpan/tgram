@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
+import { Table, Row, Col, Button ,Form,Select,Input,Pagination,Rate} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 import  './style.less'
 /*import {
   fetchRelyList,  
@@ -34,8 +35,7 @@ export default class TypeList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentPage: 1,
-      pageSize: 10,
+      value: 3,
       list:[
         {
           appName: '数印搜索', 
@@ -63,16 +63,20 @@ export default class TypeList extends Component {
         }
       ]
      }
+    this.updateState = this.updateState.bind(this)
   }
    // 组件已经加载到dom中
   componentDidMount() {//debugger
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
-        title: `新增模型`,
-        key: `/dataApp/addNewModel`,
+        title: `新增零散数据`,
+        key: `/scatteredData/newScatterData`,
       }))
     } 
+  }
+  updateState(){
+    this.setState({})
   }
   // 表格展示项的配置
   columns() {
@@ -124,58 +128,97 @@ export default class TypeList extends Component {
       },
     ]
   }
- 
+  startChange(value){
+    this.setState({
+      value: value
+    })
+  }
   render() {
     const {
             relyListSearchResult,
             peopleSituationResult
         } = this.props
-    const formItemLayout = {
-      labelCol: { span: 6 },
-      wrapperCol: { span: 14 },
-    };
     return (
-      <div className="tableWrap" >
-        <div  className="addNativeWrap">
-          <h4>新建模型应用</h4>
-          <table>
-            <tbody>
-              <tr>
-                <td>应用名称</td>
-                <td><input type="text" placeholder="应用名称"/></td>
-                <td>应用分类</td>
-                <td>
-                  <Select placeholder="交通警察支队指挥中心">
-                    <Option value="11">交通警察支队指挥中心1</Option>
-                    <Option value="22">交通警察支队指挥中心2</Option>
-                    <Option value="33">交通警察支队指挥中心3</Option>
-                  </Select>
-                </td>
-              </tr>
-              <tr>
-                <td>应用说明</td>
-                <td colSpan='3'><input type="text" placeholder="应用说明"/></td>
-              </tr>
-            </tbody>
-          </table>   
+      <div  className="newScatterDataWrap body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}}>
+        <WindowSize updateState={this.updateState}/>
+        <h4>零散数据样本</h4>
+        {/*<Table 
+          columns={this.columns()} 
+          dataSource={this.state.list}
+          pagination={false}
+          bordered
+        /> */}
+        <table>
+          <tbody>
+            <tr>
+              <td>应用名称</td>
+              <td>地铁高频人员信息</td>
+            </tr>
+            <tr>
+              <td>制作单位</td>
+              <td>科技通讯管理局</td>
+            </tr>
+            <tr>
+              <td>应用分类</td>
+              <td>原生应用</td>
+            </tr>
+            <tr>
+              <td>访问地址</td>
+              <td>www.12306.com</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>零散数据属性</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td>应用名称</td>
+              <td>地铁高频人员信息</td>
+              <td>应用类别</td>
+              <td>原生应用</td>
+            </tr>
+            <tr>
+              <td>制作单位</td>
+              <td>科技通讯管理局</td>
+              <td>制作人</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>应用分类</td>
+              <td>原生应用</td>
+              <td>应用说明</td>
+              <td>地铁高频人员信息</td>
+            </tr>
+            <tr>
+              <td>访问地址</td>
+              <td>www.12306.com</td>
+              <td>审核状态</td>
+              <td>通过</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul className="userValueList">
+          <li className="userValueItem">
+            <div className="valueTime">
+              <span>这是一个很不错的项目</span>
+              <span>
+                <em>2016-12-22</em>
+                <em>16:26:50</em>
+                <em>梁祝</em>
+              </span>
+            </div>
+            <div className="valueNumber">
+              <Rate disabled value={3}/>
+            </div>
+          </li>
+        </ul>
+        <div className="userValue">
+          <p><span>零散数据评价</span><span>{this.state.value} starts</span></p>
+          <Rate onChange={this.startChange.bind(this)} value={this.state.value}/>
+          <textarea className="userValueText"></textarea>
         </div>
-        <div className="appRankWrap">
-          <Table 
-            columns={this.columns()} 
-            dataSource={this.state.list}
-            pagination={false}
-            bordered
-          />
-        </div>
-        <div className="keepModel">
-          <Button type="primary" className="addModelBt" >新增数据</Button>
-          <Button type="primary" className="addModelBt" >新增常量</Button>
-          <Button type="primary" className="addModelBt" >新增变量</Button>
-          <Button type="primary" className="addModelBt" >新增字段</Button>
-          <Button type="primary" className="addModelBt" >保存模型</Button>
-        </div>
+        <div className="keepModel"><Button type="primary" >提交评价</Button></div>
       </div>
-      
        
     )
   }

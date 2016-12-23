@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import { Table, Button, Tabs, Card, Col, Row } from 'antd'
+import { Table, Button, Tabs, Card, Col, Row ,Modal,Input, Icon,Upload} from 'antd'
 import { updateTabList } from 'actions/tabList'
 
 import ChinaMap from './component/province/province'
@@ -26,6 +26,7 @@ export default class cards extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      uploadVisitive: false,
       appClassData:[
         {
           id: 1,
@@ -131,6 +132,16 @@ export default class cards extends Component {
         </p>
       )
   }
+  uploadModal(){
+    this.setState({
+      uploadVisitive: true,
+    })
+  }
+  uploadModalCancel(){
+    this.setState({
+      uploadVisitive: false,
+    })
+  }
   render() {
     // console.log(this.state.appClassData)
     const appClassTd = this.state.appClassData.map((item, index) => {
@@ -167,23 +178,26 @@ export default class cards extends Component {
     })
     return (
       <div className="hjt-scatterData">
-        <Col span="12">
-          <Row>
+        <Col span="12" className="leftCol">
+          <Row className="topRow">
             <Card title={this.allAppTitle()} >
               <div className="appDetailWrap">
                 <div className="appDetail">
                   <p>46</p> 
-                    <span><Link to={`/dataApp/appNative`}>数据表数</Link></span>
+                    <span><Link to={`/scatteredData/newScatterData`}>数据表数</Link></span>
                 </div>
                 <div className="appDetail">
                   <p>4</p>
-                  <span><Link to={`/dataApp/appModel`}>记录条数</Link></span>
+                  <span><Link to={`/scatteredData/newScatterData`}>记录条数</Link></span>
                 </div>
-                <div className="appDetail specialAppDetail">
-                  <p className="specialP">
-                    <Link to={`/dataApp/addNewNative`}>导入数据</Link>
-                  </p>
-                </div>
+                <Button className="uploadBt" onClick={this.uploadModal.bind(this)}>
+                  导入数据
+                </Button>
+                <Modal className="uploadModal" title="导入零散数据" footer="" visible={this.state.uploadVisitive} onCancel={this.uploadModalCancel.bind(this)}>
+                  <p className="uploadLimit">请选择。。格式文件上传</p>
+                  <p className="uploadFile"><Upload className="choseFile" type="ghost"><Icon type="upload" />选择文件</Upload></p>
+                  <p className="uploadWrap"><Button className="upload" type="primary">上传</Button></p>                  
+                </Modal>
               </div>
             </Card>
           </Row>
@@ -219,7 +233,7 @@ export default class cards extends Component {
           </Row>  
         </Col>
         <Col span="12" className="rightCol">
-          <Row>
+          <Row className="topRow">
             <Card  title={this.appAddTitle()} >
               <table className="appAddTable">
                 <tbody>{appAddTd}</tbody>

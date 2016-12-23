@@ -4,6 +4,7 @@ import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 import  './style.less'
 /*import {
   fetchRelyList,  
@@ -63,7 +64,9 @@ export default class TypeList extends Component {
         }
       ]
      }
+    this.updateState = this.updateState.bind(this)
   }
+
    // 组件已经加载到dom中
   componentDidMount() {//debugger
     if (this.props.params) {
@@ -73,6 +76,9 @@ export default class TypeList extends Component {
         key: `/info/infoResourceList`,
       }))
     } 
+  }
+  updateState(){
+    this.setState({})
   }
   // 表格展示项的配置
   columns() {
@@ -157,71 +163,72 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div  className="infoResourceWrap">
-        <Form onSubmit={this.handleSubmit}>      
-          <FormItem
-            {...formItemLayout}
-          >
-            {
-              <Select defaultValue="应用分类">
-                <Option value="中国共产党员">中国共产党员</Option>
-                <Option value="中国共产党预备员">中国共产党预备员</Option>   
-              </Select>
-            }
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-          >
-            {
-              <Select defaultValue="模型应用">
-                <Option value="中国共产党员">中国共产党员</Option>
-                <Option value="中国共产党预备员">中国共产党预备员</Option>   
-              </Select>
-            }
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-          >
-            {
-              <Select defaultValue="模型应用">
-                <Option value="中国共产党员">中国共产党员</Option>
-                <Option value="中国共产党预备员">中国共产党预备员</Option>   
-              </Select>
-            }
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-          >
-            {
-              <Select defaultValue="模型应用">
-                <Option value="中国共产党员">中国共产党员</Option>
-                <Option value="中国共产党预备员">中国共产党预备员</Option>   
-              </Select>
-            }
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-          >
-            {
-              <Select defaultValue="模型应用">
-                <Option value="中国共产党员">中国共产党员</Option>
-                <Option value="中国共产党预备员">中国共产党预备员</Option>   
-              </Select>
-            }
-          </FormItem>
-          <p className="formTitle">
-            <span>本报表生成时间：2016-12-22 19:30:32</span><br/>
-            <span>每一小时更新一次</span>
-          </p>
-          
-        </Form>
-        <Table 
-          columns={this.columns()} 
-          dataSource={this.state.list}
-          pagination={false}
-          bordered
-        />
-        <div className="listFooter">
+      <div className="body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <WindowSize updateState={this.updateState}/>
+        <div  className="infoResourceWrap">
+          <Form onSubmit={this.handleSubmit}>      
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="应用分类">
+                  <Option value="中国共产党员">中国共产党员</Option>
+                  <Option value="中国共产党预备员">中国共产党预备员</Option>   
+                </Select>
+              }
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="模型应用">
+                  <Option value="中国共产党员">中国共产党员</Option>
+                  <Option value="中国共产党预备员">中国共产党预备员</Option>   
+                </Select>
+              }
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="模型应用">
+                  <Option value="中国共产党员">中国共产党员</Option>
+                  <Option value="中国共产党预备员">中国共产党预备员</Option>   
+                </Select>
+              }
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="模型应用">
+                  <Option value="中国共产党员">中国共产党员</Option>
+                  <Option value="中国共产党预备员">中国共产党预备员</Option>   
+                </Select>
+              }
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="模型应用">
+                  <Option value="中国共产党员">中国共产党员</Option>
+                  <Option value="中国共产党预备员">中国共产党预备员</Option>   
+                </Select>
+              }
+            </FormItem>
+            <p className="formTitle">
+              <span>本报表生成时间：2016-12-22 19:30:32</span><br/>
+              <span>每一小时更新一次</span>
+            </p> 
+          </Form>
+          <Table 
+            columns={this.columns()} 
+            dataSource={this.state.list}
+            pagination={false}
+            bordered
+          />
+          <div className="listFooter">
           <Pagination
             current={this.state.currentPage || 1}
             total={30}
@@ -232,6 +239,8 @@ export default class TypeList extends Component {
           />
         </div> 
       </div>
+      </div>
+      
        
     )
   }

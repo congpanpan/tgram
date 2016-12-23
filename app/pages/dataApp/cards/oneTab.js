@@ -152,7 +152,7 @@ export default class cards extends Component {
     })
     return (
       <div className="hjt-dataApp">
-        <Col span="12">
+        <Col span="12" className="leftCol">
           <Row>
             <Card title={this.allAppTitle()} >
               <div className="appDetailWrap">

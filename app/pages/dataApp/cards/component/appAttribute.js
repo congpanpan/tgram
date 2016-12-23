@@ -34,6 +34,7 @@ export default class TypeList extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      value: 3,
       list:[
         {
           appName: '数印搜索', 
@@ -122,6 +123,11 @@ export default class TypeList extends Component {
       },
     ]
   }
+  startChange(value){
+    this.setState({
+      value: value
+    })
+  }
   render() {
     const {
             relyListSearchResult,
@@ -170,8 +176,27 @@ export default class TypeList extends Component {
             </tr>
           </tbody>
         </table>
-
-        <div className="keepModel"><Button type="primary" >保存模型</Button></div>
+        <ul className="userValueList">
+          <li className="userValueItem">
+            <div className="valueTime">
+              <span>这是一个很不错的项目</span>
+              <span>
+                <em>2016-12-22</em>
+                <em>16:26:50</em>
+                <em>梁祝</em>
+              </span>
+            </div>
+            <div className="valueNumber">
+              <Rate disabled value={3}/>
+            </div>
+          </li>
+        </ul>
+        <div className="userValue">
+          <p><span>应用评价</span><span>{this.state.value} starts</span></p>
+          <Rate onChange={this.startChange.bind(this)} value={this.state.value}/>
+          <textarea className="userValueText"></textarea>
+        </div>
+        <div className="keepModel"><Button type="primary" >提交评价</Button></div>
       </div>
        
     )

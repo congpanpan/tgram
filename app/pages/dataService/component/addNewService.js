@@ -181,7 +181,7 @@ export default class dataApp extends Component {
       <Panel>
         <div  style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
           <WindowSize updateState={this.updateState}/>
-          <Tabs tabPosition="top" onChange={this._typeChange}>
+          <Tabs tabPosition="top" onChange={this._typeChange} type="card">
             <TabPane tab="基本信息" key="1" >
                <div  className="baseMessages-cpp">
                   <Form>

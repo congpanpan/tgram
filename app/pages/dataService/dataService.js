@@ -64,11 +64,11 @@ export default class dataService extends Component {
       )
     return (
         <div  className='dataService-tab'>
-          <Tabs tabPosition="top" onChange={this._typeChange}>
-            <TabPane tab="服务首页" key="1" >
+          <Tabs tabPosition="top" onChange={this._typeChange} type="card">
+            <TabPane tab="服务首页" key="1">
              <DataServiceHome/>
             </TabPane>
-            <TabPane tab="服务管理" key="2">
+            <TabPane tab="服务管理" key="2" >
               <DataServiceManage/>
             </TabPane>
              <TabPane tab="服务申请" key="3">

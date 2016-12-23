@@ -94,7 +94,7 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>全部新增零散数据</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/scatteredData/scatterDataList`}>更多</Link>
         </p>
       )
   }
@@ -102,7 +102,7 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>零散数据业务分类</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/scatteredData/scatterDataList`}>更多</Link>
         </p>
       )
   }
@@ -110,7 +110,7 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>零散数据所属单位</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/scatteredData/scatterDataList`}>更多</Link>
         </p>
       )
   }
@@ -119,7 +119,7 @@ export default class cards extends Component {
         <p className="allAppTitle">
           <span>今日新增零散数据</span>
           <span className="newDataStatis"><em>85</em>个数据表，<em>12334123</em>条记录</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/scatteredData/scatterDataList`}>更多</Link>
         </p>
       )
   }
@@ -127,7 +127,7 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>零散数据地域分类</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/scatteredData/scatterDataList`}>更多</Link>
         </p>
       )
   }
@@ -137,13 +137,13 @@ export default class cards extends Component {
       return (
         <tr key={index}>
           <td>
-            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+            {item.title}<span><Link to={`/scatteredData/scatterDataList`}>{item.number}</Link></span>
           </td>
           <td>
-            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+            {item.title}<span><Link to={`/scatteredData/scatterDataList`}>{item.number}</Link></span>
           </td>
           <td>
-            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+            {item.title}<span><Link to={`/scatteredData/scatterDataList`}>{item.number}</Link></span>
           </td>
         </tr>
       )
@@ -199,19 +199,19 @@ export default class cards extends Component {
               <table className="appSuggestTable tbl tbl-log">
                 <tbody>
                   <tr>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
                   </tr>
                   <tr>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
                   </tr>
                   <tr>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
-                    <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
+                    <td><Link to={`/scatteredData/scatterDataList`}>地铁高频人员信息</Link></td>
                   </tr>
                 </tbody>
               </table>

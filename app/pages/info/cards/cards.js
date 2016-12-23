@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { Table, Button, Tabs, Card, Col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
-import AppRank from './component/appRank'
 
 import KeyWordStatis from './component/keyWordStatis'
 
@@ -52,45 +51,15 @@ export default class cards extends Component {
     return(
         <p className="allAppTitle">
           <span>全部新增数据</span>
+          <Link className="moreBt" to={`/info/infoResourceList`}>更多</Link>
         </p>
     )
   }
-  yNewDataTitle(){
-    return(
-        <p className="allAppTitle">
-          <span>昨日新增数据</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
-        </p>
-      )
-  }
-  appClassTitle(){
-    return(
-        <p className="allAppTitle">
-          <span>应用分类</span>
-        </p>
-      )
-  }
-  appSuggestTitle(){
-    return(
-        <p className="allAppTitle">
-          <span>全部推荐</span>
-        </p>
-    )
-  }
-  nowDataTitle(){
-    return(
-        <p className="allAppTitle">
-          <span>数据实时性监测</span>
-
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
-        </p>
-      )
-  }
-
   appAddTitle(){
     return(
         <p className="allAppTitle">
           <span>数据实时性监测</span>
+          <Link className="moreBt" to={`/info/infoResourceList`}>更多</Link>
         </p>
       )
   }
@@ -100,21 +69,12 @@ export default class cards extends Component {
         <p className="allAppTitle">
           <span>今日新增数据</span>
           <span className="newDataStatis"><em>85</em>个数据表，<em>12334123</em>条记录</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
+          <Link className="moreBt" to={`/info/infoResourceList`}>更多</Link>
         </p>
       )
   }
 
   appRankTitle(){
-    return(
-        <p className="allAppTitle">
-          <span>七日关键词排行</span>
-          <Link className="moreBt" to={`/dataApp/appList`}>更多</Link>
-        </p>
-      )
-  }
-
-  weekKeyTitle(){
     return(
         <p className="allAppTitle">
           <span>七日关键词排行</span>
@@ -140,11 +100,11 @@ export default class cards extends Component {
               <div className="appDetailWrap">
                 <div className="appDetail">
                   <p className="specialP">46</p> 
-                    <span><Link to={`/dataApp/appNative`}>原生应用</Link></span>
+                    <span><Link to={`/dataApp/appNative`}>数据表数</Link></span>
                 </div>
                 <div className="appDetail">
                   <p className="specialP">2359064662</p>
-                  <span><Link to={`/dataApp/appModel`}>模型应用</Link></span>
+                  <span><Link to={`/dataApp/appModel`}>记录条数</Link></span>
                 </div>       
               </div>
             </Card>
@@ -167,22 +127,22 @@ export default class cards extends Component {
               <div className="appDetailWrap">
                 <div className="appDetail">
                   <p className="specialP">212222</p> 
-                    <span><Link to={`/dataApp/appNative`}>实时数据</Link></span>
+                    <span><Link to={`/info/infoResourceList`}>实时数据</Link></span>
                 </div>
                 <div className="appDetail">
                   <p className="specialP">4662</p>
-                  <span><Link to={`/dataApp/appModel`}>一日内</Link></span>
+                  <span><Link to={`/info/infoResourceList`}>一日内</Link></span>
                 </div>
                 <div className="appDetail">
                   <p className="specialP">2359064662</p>
-                  <span><Link to={`/dataApp/appModel`}>久不更新</Link></span>
+                  <span><Link to={`/info/infoResourceList`}>久不更新</Link></span>
                 </div>         
               </div>
             </Card>
           </Col>
           <Col span="12" className="specialRow">
             <Card title={this.appRankTitle()} >
-              <AppRank></AppRank>
+              <KeyWordStatis></KeyWordStatis>
             </Card>
           </Col> 
         </Row> 

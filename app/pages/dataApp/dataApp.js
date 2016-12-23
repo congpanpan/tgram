@@ -5,7 +5,8 @@ import { updateTabList } from 'actions/tabList'
 import WindowSize from 'components/windowSize'
 import Panel from 'components/panel'
 
-import CardsComponent from './cards/cards'
+import CardsComponent from './cards/oneTab'
+import TabComponent from './cards/anotherTab'
 
 
 const TabPane = Tabs.TabPane;
@@ -59,7 +60,7 @@ export default class dataApp extends Component {
                 <CardsComponent></CardsComponent>
               </TabPane>
               <TabPane tab="应用管理" key="map">
-                数据应用2
+                <TabComponent></TabComponent>
               </TabPane>
             </Tabs>
           </div>

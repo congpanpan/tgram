@@ -70,11 +70,7 @@ export default class TypeList extends Component {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
         title: `应用列表`,
-<<<<<<< HEAD
-        key: `/dataApp/appRank`,
-=======
-        key: `/dataApp/appList`,
->>>>>>> 1de5b4b9a2a396a36d15ec54604f0a6a2e377779
+        key: `/info/infoResourceList`,
       }))
     } 
   }
@@ -161,7 +157,7 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div  className="appRankWrap">
+      <div  className="infoResourceWrap">
         <Form onSubmit={this.handleSubmit}>      
           <FormItem
             {...formItemLayout}
@@ -183,6 +179,41 @@ export default class TypeList extends Component {
               </Select>
             }
           </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <p className="formTitle">
+            <span>本报表生成时间：2016-12-22 19:30:32</span><br/>
+            <span>每一小时更新一次</span>
+          </p>
+          
         </Form>
         <Table 
           columns={this.columns()} 

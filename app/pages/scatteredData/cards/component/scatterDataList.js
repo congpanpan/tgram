@@ -69,8 +69,8 @@ export default class TypeList extends Component {
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
-        title: `原生应用`,
-        key: `/dataApp/appNative`,
+        title: `零散数据列表`,
+        key: `/scatteredData/scatterDataList`,
       }))
     } 
   }
@@ -157,7 +157,7 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div  className="appRankWrap">
+      <div  className="scatterDataWrap">
         <Form onSubmit={this.handleSubmit}>      
           <FormItem
             {...formItemLayout}
@@ -177,6 +177,47 @@ export default class TypeList extends Component {
                 <Option value="中国共产党员">中国共产党员</Option>
                 <Option value="中国共产党预备员">中国共产党预备员</Option>   
               </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Input placeholder="导入日期起"/>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Input placeholder="导入日期止"/>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Input placeholder="关键词"/>
             }
           </FormItem>
         </Form>

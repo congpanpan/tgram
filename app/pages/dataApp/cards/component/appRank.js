@@ -71,7 +71,7 @@ export default class TypeList extends Component {
           // console.log(record)
           return (
             <div>
-              <Link className="appName" to={`/houseDetail/${record.id}`}>{text}</Link>
+              <Link className="appName" to={`/dataApp/appAttribute`}>{text}</Link>
             </div>
           )
         }

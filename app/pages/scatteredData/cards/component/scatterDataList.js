@@ -4,6 +4,7 @@ import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 import  './style.less'
 /*import {
   fetchRelyList,  
@@ -33,6 +34,7 @@ const Option = Select.Option;
 export default class TypeList extends Component {
   constructor(props) {
     super(props)
+    this.updateState = this.updateState.bind(this)
     this.state = {
       currentPage: 1,
       pageSize: 10,
@@ -73,6 +75,9 @@ export default class TypeList extends Component {
         key: `/scatteredData/scatterDataList`,
       }))
     } 
+  }
+  updateState(){
+    this.setState({})
   }
   // 表格展示项的配置
   columns() {
@@ -157,7 +162,8 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div  className="scatterDataWrap">
+      <div  className="scatterDataWrap body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}}>
+        <WindowSize updateState={this.updateState}/>
         <Form onSubmit={this.handleSubmit}>      
           <FormItem
             {...formItemLayout}

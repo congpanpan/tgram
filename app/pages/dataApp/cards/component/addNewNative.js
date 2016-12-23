@@ -4,6 +4,7 @@ import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 import  './style.less'
 /*import {
   fetchRelyList,  
@@ -61,6 +62,7 @@ export default class TypeList extends Component {
         }
       ]
      }
+    this.updateState = this.updateState.bind(this)
   }
    // 组件已经加载到dom中
   componentDidMount() {//debugger
@@ -71,6 +73,9 @@ export default class TypeList extends Component {
         key: `/dataApp/addNewNative`,
       }))
     } 
+  }
+  updateState(){
+    this.setState({})
   }
   // 表格展示项的配置
   columns() {
@@ -128,7 +133,8 @@ export default class TypeList extends Component {
             peopleSituationResult
         } = this.props
     return (
-      <div  className="addNativeWrap">
+      <div  className="addNativeWrap body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}}>
+        <WindowSize updateState={this.updateState}/>
         <h4>新建应用</h4>
         {/*<Table 
           columns={this.columns()} 

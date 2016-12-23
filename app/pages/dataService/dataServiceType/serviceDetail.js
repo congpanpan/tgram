@@ -119,9 +119,11 @@ export default class dataApp extends Component {
             
             </TabPane>
              <TabPane tab="调试工具" key="3">
+              <ServiceError/>
             
             </TabPane>
              <TabPane tab="日志" key="4">
+              <ServiceError/>
              
             </TabPane>
           </Tabs>

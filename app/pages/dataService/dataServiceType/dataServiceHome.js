@@ -87,7 +87,7 @@ export default class dataApp extends Component {
   	const DemoBox=props=><p className={`height-${props.value}`}>{props.children}</p>
     return (
       <Panel>
-        <div className="body welcome" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <div className="body " style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
         <WindowSize updateState={this.updateState}/>
         	<Row gutter={16}>
         		<Col span={12} className="box">
@@ -129,7 +129,7 @@ export default class dataApp extends Component {
         		</Col>
         		<Col span={12} className="box">
               <Card title="服务推荐" className='service-bigDiv-cpp' extra={<Link to={`/dataService/serviceList`}>更多</Link>}>
-                <div  className='service-bigDiv-cpp '>
+                <div>
                   <ul>
                     <li>
                       <span className='service-img-cpp'></span>

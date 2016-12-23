@@ -1222,8 +1222,10 @@ h6,
 .link, a{ color: #2879c8;}
 .text-right{ text-align: right;}
 
-.main { margin-bottom: 30px;
-  .box{ position: relative; height: 212px; overflow:hidden; padding: 10px; border:1px solid #ccc;}
+.main { margin-bottom: 15px;
+  .box{ position: relative; height: 212px; overflow:hidden; padding: 10px; border:1px solid #ccc;
+    &:hover{box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); }
+  }
   .tbl{ width: 100%;
     td{ padding:8px 12px;  }
     td:last-of-type{border-right: 1px dashed #d7f3ff;}

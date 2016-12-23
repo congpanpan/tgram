@@ -94,7 +94,7 @@ export default class TypeList extends Component {
             peopleSituationResult
         } = this.props
     return (
-      <div  className="appRankWrap">
+      <div  className="keyWordStatisWrap">
         <Table 
           columns={this.columns()} 
           dataSource={this.state.list}

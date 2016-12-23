@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Table, Button, Tabs, Card, col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
-import WindowSize from 'components/windowSize'
+
 import Panel from 'components/panel'
 
 import CardsComponent from './cards/oneTab'
 import TabComponent from './cards/anotherTab'
-
+import  './dataApp.less'
 
 const TabPane = Tabs.TabPane;
 
@@ -27,7 +27,7 @@ export default class dataApp extends Component {
     super(props)
     this.state = {
     }
-    this.updateState = this.updateState.bind(this)
+    
   }
 
   // 组件已经加载到dom中
@@ -43,19 +43,17 @@ export default class dataApp extends Component {
     
   }
 
-  updateState(){
-    this.setState({})
-  }
+  
 
 
   render() {
     return (
 
-      <div className="body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}}>
-        <WindowSize updateState={this.updateState}/>
+      <div className="body" >
+        
         <Panel>
-          <div className="houseAddrList-tab">
-            <Tabs tabPosition="top" onChange={this._typeChange}>
+          <div className="dataApp-tab">
+            <Tabs tabPosition="top" onChange={this._typeChange} type="card">
               <TabPane tab="应用首页" key="list">
                 <CardsComponent></CardsComponent>
               </TabPane>

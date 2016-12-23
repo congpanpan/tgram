@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { Table, Button, Tabs, Card, Col, Row } from 'antd'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 
 import AppRank from './component/appRank'
 
@@ -25,6 +26,7 @@ export default class cards extends Component {
   // 初始化页面常量 绑定事件方法
   constructor(props) {
     super(props)
+    this.updateState = this.updateState.bind(this)
     this.state = {
       appClassData:[
         {
@@ -80,6 +82,9 @@ export default class cards extends Component {
   // 组件已经加载到dom中
   componentDidMount() {
      
+  }
+  updateState(){
+    this.setState({})
   }
   allAppTitle(){
     return(
@@ -151,7 +156,8 @@ export default class cards extends Component {
       )
     })
     return (
-      <div className="hjt-dataApp">
+      <div className="hjt-dataApp body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}}>
+        <WindowSize updateState={this.updateState}/>
         <Col span="12" className="leftCol">
           <Row>
             <Card title={this.allAppTitle()} >

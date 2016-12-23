@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import { Table, Button, Tabs,Row,Col,Input} from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+import WindowSize from 'components/windowSize'
 
 
 const TabPane = Tabs.TabPane;
@@ -25,6 +26,7 @@ export default class dataApp extends Component {
     super(props)
     this.state = {
     }
+     this.updateState = this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -39,12 +41,16 @@ export default class dataApp extends Component {
 
     
   }
+  updateState(){
+    this.setState({})
+  }
 
 
   render() {
     return (
       <Panel>
-      <div>
+       <div className="body " style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <WindowSize updateState={this.updateState}/>
         <Row>
           <Col span={18}>
           <div className='search-cpp'>

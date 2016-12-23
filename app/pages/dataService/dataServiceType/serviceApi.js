@@ -92,7 +92,7 @@ export default class dataApp extends Component {
   render() {
     return (
       <Panel>
-       <div className='serviceApi-cpp' style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+       <div className='serviceApi-cpp' style={{height:$GLOBALCONFIG.PAGEHEIGHT-200+'px'}}>
          <WindowSize updateState={this.updateState}/>
         <ul>
           <li><span>版本号：1.0</span></li>

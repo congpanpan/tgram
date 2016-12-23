@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import { Table, Button, Tabs,Row,Col,Input,Form, Select} from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+import WindowSize from 'components/windowSize'
 const createForm = Form.create
 const FormItem = Form.Item
 const Option = Select.Option
@@ -48,6 +49,7 @@ export default class dataApp extends Component {
       ],
     }
      this._typeChange=this._typeChange.bind(this)
+     this.updateState=this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -164,6 +166,9 @@ export default class dataApp extends Component {
   this.setState({key:key})
 
   }
+  updateState(){
+    this.setState({})
+  }
 
 
   render() {
@@ -174,7 +179,8 @@ export default class dataApp extends Component {
      }
     return (
       <Panel>
-        <div>
+        <div  style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+          <WindowSize updateState={this.updateState}/>
           <Tabs tabPosition="top" onChange={this._typeChange}>
             <TabPane tab="基本信息" key="1" >
                <div  className="baseMessages-cpp">

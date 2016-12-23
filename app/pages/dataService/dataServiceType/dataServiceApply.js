@@ -5,6 +5,7 @@ import { Table, Button, Tabs,Row,Col,Modal } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
 import ServiceAddModal from './serviceAddModal'
+import WindowSize from 'components/windowSize'
 
 
 const TabPane = Tabs.TabPane;
@@ -26,7 +27,7 @@ export default class dataApp extends Component {
     this.state = {
     	ServiceAddVisible:false
     }
-    
+    this.updateState=this.updateState.bind(this)
     this.serviceApply=this.serviceApply.bind(this)
     this.handleserviceAddCancel=this.handleserviceAddCancel.bind(this)
     this.handleserviceAddOk=this.handleserviceAddOk.bind(this)
@@ -60,182 +61,185 @@ export default class dataApp extends Component {
   		ServiceAddVisible:false
   	})
   }
-
+  updateState(){
+    this.setState({})
+  }
 
   render() {
     return (
-      <Panel className='serviceApply-cpp'>
-        <div className='serviceApply-cpp'>
-	      <div className='apply-div-cpp'>
-	      	<Row>
-	      	 <Col span={2}>
-		      	  <div>
-		      	   	<span className='service-img-cpp'></span>
-		      	  </div>
-	      	 </Col>
-	      		<Col span={6}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>组织机构查询接口</li>
-		      				<li>请求方式:POST</li>
-		      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
-		      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
-		      			</ul>
-	      		  </div>
-	      		</Col>
-	      		<Col span={10}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>提供方:数印</li>
-		      				<li>请求方式:POST</li>
-		      				<li>提供方:数印</li>
-		      				<li>服务状态:可用</li>
-		      			</ul>
-		      		</div>
-	      		</Col>
-	      		<Col span={6}>
-	      		  <div className='apply-button-cpp'>
-	      		  	<Button onClick={this.serviceApply}>申请服务</Button>
-	      		  </div>   
-	      		</Col>
-	      	</Row>
-	      </div>
-	       <div className='apply-div-cpp'>
-	      	<Row>
-	      	 <Col span={2}>
-		      	  <div>
-		      	   	<span className='service-img-cpp'></span>
-		      	  </div>
-	      	 </Col>
-	      		<Col span={6}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>组织机构查询接口</li>
-		      				<li>请求方式:POST</li>
-		      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
-		      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
-		      			</ul>
-	      		  </div>
-	      		</Col>
-	      		<Col span={10}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>提供方:数印</li>
-		      				<li>请求方式:POST</li>
-		      				<li>提供方:数印</li>
-		      				<li>服务状态:可用</li>
-		      			</ul>
-		      		</div>
-	      		</Col>
-	      		<Col span={6}>
-	      		  <div className='apply-button-cpp'>
-	      		  	<Button onClick={this.serviceApply}>申请服务</Button>
-	      		  </div>   
-	      		</Col>
-	      	</Row>
-	      </div>
-	       <div className='apply-div-cpp'>
-	      	<Row>
-	      	 <Col span={2}>
-		      	  <div>
-		      	   	<span className='service-img-cpp'></span>
-		      	  </div>
-	      	 </Col>
-	      		<Col span={6}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>组织机构查询接口</li>
-		      				<li>请求方式:POST</li>
-		      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
-		      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
-		      			</ul>
-	      		  </div>
-	      		</Col>
-	      		<Col span={10}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>提供方:数印</li>
-		      				<li>请求方式:POST</li>
-		      				<li>提供方:数印</li>
-		      				<li>服务状态:可用</li>
-		      			</ul>
-		      		</div>
-	      		</Col>
-	      		<Col span={6}>
-	      		  <div className='apply-button-cpp'>
-	      		  	<Button onClick={this.serviceApply}>申请服务</Button>
-	      		  </div>   
-	      		</Col>
-	      	</Row>
-	      </div>
-	      <div className='apply-div-cpp'>
-	      	<Row>
-	      	 <Col span={2}>
-		      	  <div>
-		      	   	<span className='service-img-cpp'></span>
-		      	  </div>
-	      	 </Col>
-	      		<Col span={6}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>组织机构查询接口</li>
-		      				<li>请求方式:POST</li>
-		      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
-		      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
-		      			</ul>
-	      		  </div>
-	      		</Col>
-	      		<Col span={10}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>提供方:数印</li>
-		      				<li>请求方式:POST</li>
-		      				<li>提供方:数印</li>
-		      				<li>服务状态:可用</li>
-		      			</ul>
-		      		</div>
-	      		</Col>
-	      		<Col span={6}>
-	      		  <div className='apply-button-cpp'>
-	      		  	<Button onClick={this.serviceApply}>申请服务</Button>
-	      		  </div>   
-	      		</Col>
-	      	</Row>
-	      </div>
-	      <div className='apply-div-cpp'>
-	      	<Row>
-	      	 <Col span={2}>
-		      	  <div>
-		      	   	<span className='service-img-cpp'></span>
-		      	  </div>
-	      	 </Col>
-	      		<Col span={6}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>组织机构查询接口</li>
-		      				<li>请求方式:POST</li>
-		      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
-		      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
-		      			</ul>
-	      		  </div>
-	      		</Col>
-	      		<Col span={10}>
-		      		<div className='apply-title-cpp'>
-		      			<ul>
-		      				<li>提供方:数印</li>
-		      				<li>请求方式:POST</li>
-		      				<li>提供方:数印</li>
-		      				<li>服务状态:可用</li>
-		      			</ul>
-		      		</div>
-	      		</Col>
-	      		<Col span={6}>
-	      		  <div className='apply-button-cpp'>
-	      		  	<Button onClick={this.serviceApply}>申请服务</Button>
-	      		  </div>   
-	      		</Col>
-	      	</Row>
-	      </div>
+      <Panel >
+        <div className='serviceApply-cpp' style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+          <WindowSize updateState={this.updateState}/>
+		      <div className='apply-div-cpp'>
+		      	<Row>
+		      	 <Col span={2}>
+			      	  <div>
+			      	   	<span className='service-img-cpp'></span>
+			      	  </div>
+		      	 </Col>
+		      		<Col span={6}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>组织机构查询接口</li>
+			      				<li>请求方式:POST</li>
+			      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
+			      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
+			      			</ul>
+		      		  </div>
+		      		</Col>
+		      		<Col span={10}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>提供方:数印</li>
+			      				<li>请求方式:POST</li>
+			      				<li>提供方:数印</li>
+			      				<li>服务状态:可用</li>
+			      			</ul>
+			      		</div>
+		      		</Col>
+		      		<Col span={6}>
+		      		  <div className='apply-button-cpp'>
+		      		  	<Button onClick={this.serviceApply}>申请服务</Button>
+		      		  </div>   
+		      		</Col>
+		      	</Row>
+		      </div>
+		       <div className='apply-div-cpp'>
+		      	<Row>
+		      	 <Col span={2}>
+			      	  <div>
+			      	   	<span className='service-img-cpp'></span>
+			      	  </div>
+		      	 </Col>
+		      		<Col span={6}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>组织机构查询接口</li>
+			      				<li>请求方式:POST</li>
+			      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
+			      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
+			      			</ul>
+		      		  </div>
+		      		</Col>
+		      		<Col span={10}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>提供方:数印</li>
+			      				<li>请求方式:POST</li>
+			      				<li>提供方:数印</li>
+			      				<li>服务状态:可用</li>
+			      			</ul>
+			      		</div>
+		      		</Col>
+		      		<Col span={6}>
+		      		  <div className='apply-button-cpp'>
+		      		  	<Button onClick={this.serviceApply}>申请服务</Button>
+		      		  </div>   
+		      		</Col>
+		      	</Row>
+		      </div>
+		       <div className='apply-div-cpp'>
+		      	<Row>
+		      	 <Col span={2}>
+			      	  <div>
+			      	   	<span className='service-img-cpp'></span>
+			      	  </div>
+		      	 </Col>
+		      		<Col span={6}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>组织机构查询接口</li>
+			      				<li>请求方式:POST</li>
+			      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
+			      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
+			      			</ul>
+		      		  </div>
+		      		</Col>
+		      		<Col span={10}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>提供方:数印</li>
+			      				<li>请求方式:POST</li>
+			      				<li>提供方:数印</li>
+			      				<li>服务状态:可用</li>
+			      			</ul>
+			      		</div>
+		      		</Col>
+		      		<Col span={6}>
+		      		  <div className='apply-button-cpp'>
+		      		  	<Button onClick={this.serviceApply}>申请服务</Button>
+		      		  </div>   
+		      		</Col>
+		      	</Row>
+		      </div>
+		      <div className='apply-div-cpp'>
+		      	<Row>
+		      	 <Col span={2}>
+			      	  <div>
+			      	   	<span className='service-img-cpp'></span>
+			      	  </div>
+		      	 </Col>
+		      		<Col span={6}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>组织机构查询接口</li>
+			      				<li>请求方式:POST</li>
+			      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
+			      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
+			      			</ul>
+		      		  </div>
+		      		</Col>
+		      		<Col span={10}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>提供方:数印</li>
+			      				<li>请求方式:POST</li>
+			      				<li>提供方:数印</li>
+			      				<li>服务状态:可用</li>
+			      			</ul>
+			      		</div>
+		      		</Col>
+		      		<Col span={6}>
+		      		  <div className='apply-button-cpp'>
+		      		  	<Button onClick={this.serviceApply}>申请服务</Button>
+		      		  </div>   
+		      		</Col>
+		      	</Row>
+		      </div>
+		      <div className='apply-div-cpp'>
+		      	<Row>
+		      	 <Col span={2}>
+			      	  <div>
+			      	   	<span className='service-img-cpp'></span>
+			      	  </div>
+		      	 </Col>
+		      		<Col span={6}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>组织机构查询接口</li>
+			      				<li>请求方式:POST</li>
+			      				<li><span className='apply-span-cpp'>已申请</span><span>40</span></li>
+			      				<li><span className='use-span-cpp'>已使用</span><span>0</span></li>
+			      			</ul>
+		      		  </div>
+		      		</Col>
+		      		<Col span={10}>
+			      		<div className='apply-title-cpp'>
+			      			<ul>
+			      				<li>提供方:数印</li>
+			      				<li>请求方式:POST</li>
+			      				<li>提供方:数印</li>
+			      				<li>服务状态:可用</li>
+			      			</ul>
+			      		</div>
+		      		</Col>
+		      		<Col span={6}>
+		      		  <div className='apply-button-cpp'>
+		      		  	<Button onClick={this.serviceApply}>申请服务</Button>
+		      		  </div>   
+		      		</Col>
+		      	</Row>
+		      </div>
 	      </div>
 	      <Modal
             visible={this.state.ServiceAddVisible}
@@ -245,7 +249,6 @@ export default class dataApp extends Component {
           >
            <ServiceAddModal />
          </Modal>		
-
       </Panel>
     )
 

@@ -4,6 +4,7 @@ import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 
 /*import {
   fetchRelyList,  
@@ -88,6 +89,7 @@ export default class TypeList extends Component {
         
       ]
      }
+     this.updateState=this.updateState.bind(this)
   }
    // 组件已经加载到dom中
   componentDidMount() {//debugger
@@ -178,6 +180,9 @@ export default class TypeList extends Component {
   showTotal(){
     return `共 ${30} 条`
   }
+  updateState(){
+    this.setState({})
+  }
   render() {
     const {
             relyListSearchResult,
@@ -188,7 +193,8 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div  className="appRankWrap">
+      <div  className="appRankWrap"  style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+        <WindowSize updateState={this.updateState}/>
         <Form onSubmit={this.handleSubmit}>      
           <FormItem
             {...formItemLayout}

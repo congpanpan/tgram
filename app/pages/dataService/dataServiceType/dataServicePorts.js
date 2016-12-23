@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Table, Button, Tabs,Input,Form ,Select} from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
+import WindowSize from 'components/windowSize'
 
 
 const TabPane = Tabs.TabPane;
@@ -31,6 +32,7 @@ export default class dataApp extends Component {
     super(props)
     this.state = {
     }
+     this.updateState = this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -44,7 +46,9 @@ export default class dataApp extends Component {
     }
     
   }
-
+  updateState(){
+    this.setState({})
+  }
 
   render() {
      const formItemLayout = {
@@ -53,7 +57,8 @@ export default class dataApp extends Component {
     };
     return (
       <Panel>
-        <div className="appRankWrap">
+        <div className="appRankWrap" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px'}}>
+          <WindowSize updateState={this.updateState}/>
           <Form >
             <FormItem
               {...formItemLayout}

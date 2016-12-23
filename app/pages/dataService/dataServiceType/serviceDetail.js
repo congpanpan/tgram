@@ -7,6 +7,7 @@ import Panel from 'components/panel'
 import ServiceApi from './serviceApi'
 import ServiceError from './serviceError'
 import ServiceAddModal from './serviceAddModal'
+import WindowSize from 'components/windowSize'
 
 
 const TabPane = Tabs.TabPane;
@@ -32,6 +33,7 @@ export default class dataApp extends Component {
     this.serviceApply=this.serviceApply.bind(this)
     this.handleserviceAddCancel=this.handleserviceAddCancel.bind(this)
     this.handleserviceAddOk=this.handleserviceAddOk.bind(this)
+    this.updateState=this.updateState.bind(this)
   }
 
   // 组件已经加载到dom中
@@ -63,6 +65,9 @@ export default class dataApp extends Component {
     this.setState({
       ServiceAddVisible:false
     })
+  }
+   updateState(){
+    this.setState({})
   }
 
 

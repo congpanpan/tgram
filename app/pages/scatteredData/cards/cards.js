@@ -190,7 +190,7 @@ export default class cards extends Component {
                   <p>4</p>
                   <span><Link to={`/scatteredData/newScatterData`}>记录条数</Link></span>
                 </div>
-                <Button className="uploadBt" onClick={this.uploadModal.bind(this)}>
+                <Button className="uploadBt" type="primary" onClick={this.uploadModal.bind(this)}>
                   导入数据
                 </Button>
                 <Modal className="uploadModal" title="导入零散数据" footer="" visible={this.state.uploadVisitive} onCancel={this.uploadModalCancel.bind(this)}>

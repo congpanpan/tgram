@@ -164,16 +164,12 @@ export default class cards extends Component {
                   <p>4</p>
                   <span><Link to={`/dataApp/appModel`}>模型应用</Link></span>
                 </div>
-                <div className="appDetail specialAppDetail">
-                  <p className="specialP">
-                    <Link to={`/dataApp/addNewNative`}>新增<span>原生应用</span></Link>
-                  </p>
-                </div>
-                <div className="appDetail specialAppDetail">
-                  <p className="specialP">
-                    <Link to={`/dataApp/addNewModel`}>新增<span>模型</span></Link>
-                  </p>                 
-                </div>
+                <Button className="uploadBt" type="primary">
+                  <Link to={`/dataApp/addNewNative`}>新增<p>原生应用</p></Link>
+                </Button>
+                <Button className="uploadBt" type="primary">
+                  <Link to={`/dataApp/addNewModel`}>新增<span>模型</span></Link>
+                </Button>
               </div>
             </Card>
           </Row>

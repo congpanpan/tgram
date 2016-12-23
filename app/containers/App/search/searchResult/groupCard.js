@@ -16,7 +16,7 @@ export default class groupCard extends Component{
 			<Row className='groupCard'>
 				<Col span={24}>
 					<Link to={`/searchConverge/${this.state.value}`}>
-						<img className='groupCardImg'/>
+						<img className='groupCardImg' src={this.props.src}/>
 					</Link>
 				</Col>
 				<Col span={24}>

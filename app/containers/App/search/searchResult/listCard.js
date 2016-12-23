@@ -16,7 +16,7 @@ export default class listCard extends Component{
 			<Row gutter={16} className="listCard">
 				<Col span={2}>
 					<Link to={`/searchConverge/${this.state.value}`}>
-						<img className='listCardImg'/>
+						<img className='listCardImg' src={this.props.src}/>
 					</Link>
 				</Col>
 				<Col span={7}>

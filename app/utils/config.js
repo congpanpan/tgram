@@ -29,13 +29,13 @@ export const convergeType = [
 ]
 //相关登记信息
 export const convergeRegisterType = [
-  { name:"新市民卡" , url:'xsmk' },
-  { name:"公积金基本信息" , url:'gjkjbxx' },
-  { name:"驾照登记" , url:'jzdj' },
-  { name:"驾驶学员登记" , url:'jsxydj' },
-  { name:"公积金贷款" , url:'gjjdl' },
-  { name:"虚拟身份-全采通" , url:'xnsfqct' },
-  { name:"婚姻信息" , url:'hyxx' },
+  { name:"新市民卡" , url:'newIdCard' },
+  { name:"公积金基本信息" , url:'publicMes' },
+  { name:"驾照登记" , url:'drivingLicense' },
+  { name:"驾驶学员登记" , url:'drivingStudent' },
+  { name:"公积金贷款" , url:'publicLoan' },
+  { name:"虚拟身份-全采通" , url:'virtualWorld' },
+  { name:"婚姻信息" , url:'marriageMes' },
 ]
 //相关数据信息
 export const convergeOtherType = [

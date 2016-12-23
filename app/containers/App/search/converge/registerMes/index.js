@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
 import { Row,Col,Timeline} from 'antd'
 
-const lineItem = Timeline.Item
-
+import Register from './register/index'
+import OtherMes from './otherMes/index'
 export default class registerMes extends Component{
 	// 初始化页面常量 绑定事件方法
 	constructor(props,context){
@@ -129,36 +129,36 @@ export default class registerMes extends Component{
 							</td>
 						</tr>
 						<tr>
-							<td colSpan="4">
+							<td colSpan="4" className="timeline">
 								<Timeline>
-									<lineItem>
+									<Timeline.Item>
 										<div>
 											<span>2016-11-29 05:29</span>
 											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
 											<span>[机动车]</span>
 										</div>
-									</lineItem>
-									<lineItem>
+									</Timeline.Item>
+									<Timeline.Item>
 										<div>
 											<span>2016-11-29 05:29</span>
 											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
 											<span>[机动车]</span>
 										</div>
-									</lineItem>
-									<lineItem>
+									</Timeline.Item>
+									<Timeline.Item>
 										<div>
 											<span>2016-11-29 05:29</span>
 											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
 											<span>[机动车]</span>
 										</div>
-									</lineItem>
-									<lineItem>
+									</Timeline.Item>
+									<Timeline.Item>
 										<div>
 											<span>2016-11-29 05:29</span>
 											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
 											<span>[机动车]</span>
 										</div>
-									</lineItem>
+									</Timeline.Item>
 								</Timeline>
 								<ul>
 									<li className='circle-border'>
@@ -189,27 +189,37 @@ export default class registerMes extends Component{
 							</td>
 						</tr>
 						<tr>
-							<td colSpan="4">
-								<ul>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-								</ul>
+							<td colSpan="4" className="timeline">
+								<Timeline>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+								</Timeline>
 								<div></div>
 							</td>
 						</tr>
@@ -219,27 +229,37 @@ export default class registerMes extends Component{
 							</td>
 						</tr>
 						<tr>
-							<td colSpan="4">
-								<ul>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-								</ul>
+							<td colSpan="4" className="timeline">
+								<Timeline>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+								</Timeline>
 								<div></div>
 							</td>
 						</tr>
@@ -254,38 +274,57 @@ export default class registerMes extends Component{
 							</td>
 						</tr>
 						<tr>
-							<td colSpan="4">
-								<ul>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-									<li className='circle-border'>
-										<span className='circle'></span>
-										<span>2016-11-29 05:29</span>
-										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
-										<span>[机动车]</span>
-									</li>
-								</ul>
-								<div></div>
+							<td colSpan="4" className="timeline">
+								<Timeline>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+									<Timeline.Item>
+										<div>
+											<span>2016-11-29 05:29</span>
+											<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
+											<span>[机动车]</span>
+										</div>
+									</Timeline.Item>
+								</Timeline>
 							</td>
 						</tr>
 						<tr>
 							<td colSpan="4">
-								<span className='table-title'>相关登记</span>
+								<span className='content-title'>相关登记</span>
 							</td>
 						</tr>
 						<tr>
 							<td colSpan="4">
-								<span className='table-title'>相关数据</span>
+								<Register/>
+							</td>
+						</tr>
+						<tr>
+							<td colSpan="4">
+								<span className='content-title'>相关数据</span>
+							</td>
+						</tr>
+						<tr>
+							<td colSpan="4">
+								<OtherMes/>
 							</td>
 						</tr>
 					</tbody>

@@ -11,7 +11,7 @@ export default class resultList extends Component{
 
 	render(){
 		return(
-			<ul>
+			<ul className="resultList">
 				{this.props.data.map((sub,i)=>(
 					<li key={i}>
 						<ListCard data={sub} />		

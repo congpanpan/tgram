@@ -21,6 +21,7 @@ export default class searchContent extends Component{
 
 	componentDidMount() {
     const value = this.props.value || this.props.params.value || ""
+    this.props.history.createPath()
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
@@ -65,7 +66,10 @@ export default class searchContent extends Component{
   						<Col span={4}>
   							<Input/>
   						</Col>
-  						<Col span={12}/>
+              <Col span={1}>
+                <Button size="small">增加</Button>
+              </Col>
+  						<Col span={11}/>
   					</Row>
   					<SearchResult/>
   				</div>

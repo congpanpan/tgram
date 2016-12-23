@@ -88,6 +88,10 @@ import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
 import  appAttribute  from './pages/dataApp/cards/component/appAttribute'
 import  infoResourceList  from './pages/info/cards/component/infoResourceList'
 import  scatterDataList  from './pages/scatteredData/cards/component/scatterDataList'
+//数据服务
+import addNewService from './pages/dataService/component/addNewService'
+import serviceList from './pages/dataService/dataServiceType/serviceList'
+import serviceDetail from './pages/dataService/dataServiceType/serviceDetail'
 
 /*进入路由的判断*/
 window.loginFlag = true
@@ -146,6 +150,9 @@ const routes = (
 
       <Route path="/searchContent/:value" component={searchContent} />
       <Route path="/searchConverge/:value" component={searchConverge} />
+      <Route path="/dataService/addNewService" component={addNewService}/>
+      <Route path="/dataService/serviceList" component={serviceList}/>
+      <Route path="/dataService/serviceDetail" component={serviceDetail}/>
     </Route>
 
     <Route path="/login" component={Login} />

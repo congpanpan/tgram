@@ -49,11 +49,6 @@ export default class dataApp extends Component {
   }
   columns() {
     return [
-    /*  {
-        title: '',
-        key: 'index',
-        render: (text, recordId, index) => <span>{index + 1}</span>,
-      },*/
       {
         title: '服务名称',
         dataIndex: 'xm',

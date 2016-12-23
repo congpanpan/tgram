@@ -15,15 +15,15 @@ export default class searchResult extends Component{
 		this.state={
 			activeSub:"list",
       list:[
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head1.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head2.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head3.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head4.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head5.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head6.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head7.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/toux_pic2.png"},
-        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/toux_pic2.png"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head1.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head2.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head3.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head4.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head5.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head6.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/head7.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/toux_pic2.jpg"},
+        {name:'许晶晶',sex:'女',age:'24岁',nation:'汉族',birthday:'1992-04-22出生',sfhm:'321323199204227280',phoneNum:18268845258,hjd:"杭州市萧山区",jgsxs:'江苏省泗阳县',gxdw:'下城分局文晖派出所',src:"images/head/toux_pic2.jpg"},
       ]
 		}
 	}

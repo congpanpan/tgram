@@ -11,31 +11,6 @@ export default class newIdCard extends Component{
     }
   }
 
-  columns(){
-    return[
-      {
-        title:'市民卡号',
-        dataIndex:'idNum',
-        key:'idNum'
-      },
-      {
-        title:'卡类型',
-        dataIndex:'cardType',
-        key:'cardType'
-      },
-      {
-        title:'卡状态',
-        dataIndex:'cardStatus',
-        key:'cardStatus'
-      },
-      {
-        title:'领卡日期',
-        dataIndex:'cardDate',
-        key:'cardDate'
-      },
-    ]
-  }
-
   render(){
     return(
       <table className='little-table table'>

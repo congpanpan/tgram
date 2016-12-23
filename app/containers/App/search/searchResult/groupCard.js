@@ -6,7 +6,7 @@ export default class groupCard extends Component{
 	constructor(props,context){
 		super(props)
 		this.state={
-
+			value:1
 		}
 	}
 
@@ -16,7 +16,7 @@ export default class groupCard extends Component{
 			<Row className='groupCard'>
 				<Col span={24}>
 					<Link to={`/searchConverge/${this.state.value}`}>
-						<img className='groupCardImg' src={this.props.src}/>
+						<img className='groupCardImg' src={value.src}/>
 					</Link>
 				</Col>
 				<Col span={24}>

@@ -41,3 +41,13 @@ export const convergeRegisterType = [
 export const convergeOtherType = [
   { name:"机动车" , url:'car' },
 ]
+//轨迹聚合
+export const trailConvergeType = [
+  { name:"全部" , url:'trailAll' },
+  { name:"常住人口" , url:'peopleLive' },
+  { name:"老版住宿" , url:'oldLive' },
+  { name:"警务通人员核查记录" , url:'drivingStudent' },
+  { name:"省厅-人员核查记录" , url:'publicLoan' },
+  { name:"铁路售票" , url:'virtualWorld' },
+  { name:"客运车实名售票记录" , url:'marriageMes' },
+]

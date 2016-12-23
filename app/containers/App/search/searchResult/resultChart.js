@@ -1,5 +1,6 @@
 import React ,{Component} from 'react'
 import {} from 'antd'
+import Apppop from '../../../../pages/appBase/apppop/apppop'
 
 export default class resultChart extends Component{
 	constructor(props,context){
@@ -11,9 +12,7 @@ export default class resultChart extends Component{
 
 	render(){
 		return(
-			<div>
-				图表统计
-			</div>
+			<Apppop/>
 		)
 	}
 }

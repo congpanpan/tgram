@@ -160,7 +160,7 @@ export default class registerMes extends Component{
 										</div>
 									</Timeline.Item>
 								</Timeline>
-								<ul>
+								{/*<ul>
 									<li className='circle-border'>
 										<span className='circle'></span>
 										<span>2016-11-29 05:29</span>
@@ -179,7 +179,7 @@ export default class registerMes extends Component{
 										<span>杭州市萧山区城乡街道杭齿厂家属区252户</span>
 										<span>[机动车]</span>
 									</li>
-								</ul>
+								</ul>*/}
 								<div></div>
 							</td>
 						</tr>

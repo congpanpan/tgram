@@ -1,7 +1,9 @@
 import React,{Component} from 'react'
 import {Icon,Button,Input,Row,Col} from 'antd'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import { updateTabList } from 'actions/tabList'
+import WindowSize from 'components/windowSize'
 
 import SearchResult from './searchResult/index'
 
@@ -17,11 +19,12 @@ export default class searchContent extends Component{
 			activeSub: 'groupInformation',
 		}
 		this.closeType = this.closeType.bind(this)
+    this.updateState = this.updateState.bind(this)
 	}
 
 	componentDidMount() {
     const value = this.props.value || this.props.params.value || ""
-    this.props.history.createPath()
+    // this.props.history.createPath()
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
@@ -34,16 +37,21 @@ export default class searchContent extends Component{
   closeType(){
   	console.log(111111)
   }
-
+  updateState(){
+    this.setState({})
+  }
 	render(){
 		return(
-      <div className="search-lzr">
+      <div className="search-lzr" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px',overflowY:'auto'}}>
+        <WindowSize updateState={this.updateState}/>
   			<div className="searchContent-lzr">
           <div className="searchType-line">
     				<div className="searchType">
     					<span>常住人口</span>
     					<span className='close-icon'>
-    						<Icon type='close' className="icon1" onClick={this.closeType}/>
+                <Link to={`/`}>
+    						  <Icon type='close' className="icon1"/>
+                </Link>
     					</span>
     				</div>
           </div>

@@ -1,5 +1,5 @@
 .groupCardImg{
-	width:145px;
+	width:130px;
 	height:150px;
 }
 
@@ -24,13 +24,26 @@
 }
 .search{
 	position: absolute;
-	width: 75%
+	width: 85%
 }
 .search .ant-row{
 	margin-top: 10px;
 }
 .searchInput {
 	width: 75% !important;
+	text-indent: 80px;
+}
+.selectData{
+	position: relative;
+}
+.selectData .selectDataBtn{
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    left: 2px;
+}
+.selectData .searchBtn{
+	margin-left:5px;
 }
 .search-lzr{
 	background-color: #fff;
@@ -60,9 +73,10 @@
 	right: 10px;
 	top:10px;
 	margin-top: -20px;
-	/*display: none;*/
 }
-
+.searchContent-lzr .searchType .close-icon a{
+	color: #fff;
+}
 .searchContent-lzr .searchType .close-icon :hover{
 	cursor:pointer;
 	/*display: block;*/
@@ -94,10 +108,12 @@
 	padding:0px 5px;
 	background: #F38F17;
 }
+.searchContent-lzr .ant-tabs .ant-tabs-bar{
+	float: right;
+	margin-top: -40px;
+}
 .searchContent-lzr .ant-tabs{
-	position: absolute;
-    top: -50px;
-    right: 10px;
+	overflow: inherit;
 }
 .searchContent-lzr .handleBtn{
 	display: inline-block;
@@ -111,6 +127,9 @@
 .table{
 	width: 100%;
 	/*border-collapse: collapse;*/
+}
+.table .ant-tabs-nav .ant-tabs-tab{
+	font-size: 12px;
 }
 .table span{
 	display: inline-block;
@@ -207,7 +226,10 @@
 	color: #AD9B73;
 }
 .timeline ul{
-	margin: 15px;
+	padding:15px 0px 0px 15px;
+}
+.trail-line ul{
+	border-top: 1px solid #ccc;
 }
 .timeline .ant-timeline-item{
 	padding: 0px;
@@ -215,6 +237,15 @@
 .timeline .ant-timeline-item-content{
 	top: -9px;
 	padding: 0 0 0px 26px; 
+}
+.timeline li .line-span >span{
+	margin-right: 5px;
+}
+.timeline li span{
+	margin-right: 15px;
+}
+.timeline .notice{
+	font-weight: bold;
 }
 .jh-table .panel-body{
 	padding: 0px
@@ -228,4 +259,18 @@
 }
 .little-table td{
 	color:#497697;
+}
+.search-head {
+	float: left;
+    margin-top: 7px;
+}
+.search-head .back{
+    font-size: 24px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+	color: #666;
+}
+.search-tabs{
+	margin-bottom: 10px;
 }

@@ -163,6 +163,9 @@ export default class gsearch extends Component{
     this.handleOk = this.handleOk.bind(this)
     this.handleCancel = this.handleCancel.bind(this)
     this.listType = this.listType.bind(this)
+    this.selectAll = this.selectAll.bind(this)
+    this.selectNone = this.selectNone.bind(this)
+    this._tabChange = this._tabChange.bind(this)
 	}
 
   componentDidMount(){
@@ -179,7 +182,34 @@ export default class gsearch extends Component{
   handleOk(){
 
   }
-
+  //全部选择
+  selectAll(){
+    const currentTab = this.state.currentTab
+    // console.log(this.state.currentTab)
+    this.state.data.map((tab, index) => {
+      tab.tab==currentTab?
+      tab.pane.map((pane, index) => {
+          pane.list.map(list => {
+            list.checked=true
+          })
+      }):null
+    })
+    this.setState({})
+  }
+  //全部取消
+  selectNone(){
+    const currentTab = this.state.currentTab
+    // console.log(this.state.currentTab)
+    this.state.data.map((tab, index) => {
+      tab.tab==currentTab?
+      tab.pane.map((pane, index) => {
+          pane.list.map(list => {
+            list.checked=false
+          })
+      }):null
+    })
+    this.setState({})
+  }
   // 取消弹窗
   handleCancel(){
     this.props.handleSelect()
@@ -193,7 +223,9 @@ export default class gsearch extends Component{
     tag.checked = !tag.checked
     this.setState({})
   }
-
+  _tabChange(key){
+    this.setState({currentTab:key})
+  }
   // 判断当前的数据类型
   listType(e, type){
     let a = ''
@@ -276,8 +308,8 @@ export default class gsearch extends Component{
           onCancel={this.handleCancel}
           footer={
             [
-              <Button key="selectAll" type="default" onClick={this.handleCancel}>全部选择</Button>,
-              <Button key="selectNone" type="default" onClick={this.handleCancel}>全部清除</Button>,
+              <Button key="selectAll" type="default" onClick={this.selectAll}>全部选择</Button>,
+              <Button key="selectNone" type="default" onClick={this.selectNone}>全部清除</Button>,
               <Button key="selectSave" type="default" onClick={this.handleCancel}>存为默认</Button>,
               <Button key="submit" type="primary" onClick={this.handleOk}>确定</Button>,
             ]

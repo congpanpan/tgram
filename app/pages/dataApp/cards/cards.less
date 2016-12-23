@@ -12,16 +12,28 @@
 	}
 	.ant-card-bordered{
 		height: 228px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
 	}
-	.ant-row {
-    margin-top: 16px;
-    margin-right: 8px;
-    margin-left: 8px;
-    margin-bottom: 8px;
+  .leftCol{
+    .ant-row {
+      margin-top: 16px;
+      /*margin-right: 8px;*/
+      margin-left: 2px;
+      /*margin-bottom: 8px;*/
+    }
+  }
+	.rightCol{
+    .ant-row {
+      margin-top: 16px;
+      margin-right: 2px;
+      margin-left: 16px;
+      /*margin-bottom: 8px;*/
+    }
   }
   .specialRow{
   	.ant-card-bordered{
-			height: 472px;
+			height: 476px;
 		}
   }
   .ant-card-head{
@@ -55,15 +67,16 @@
       font-size: 20px;
       background: #F3F5F4;
   		border: 1px solid #ddd;
-  		span{
-  			display: block;	
-  		}
   	}
+    span{
+      display: inline-block;
+      margin-top: 10px; 
+    }
   	.specialP{
   		border: none;
       background: #51A7FA;
       color: #fff;
-      margin-top: -20px;
+      margin-top: -28px;
       font-size: 14px;
       line-height: 24px;
   	}
@@ -71,6 +84,17 @@
   		line-height: 20px;
   		color: #51A7FA;
   	}
+  }
+  .uploadBt{
+    border: none;
+    margin-top: -28px;
+    margin-left: 15px;
+    color: #fff;
+    border-radius: 8px;
+    height: 64px;
+    padding: 10px;
+    min-width: 18%;
+    font-size: 14px;
   }
   .specialAppDetail{
   	background: #51A7FA;

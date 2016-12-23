@@ -88,6 +88,7 @@ import  addNewNative  from './pages/dataApp/cards/component/addNewNative'
 import  appAttribute  from './pages/dataApp/cards/component/appAttribute'
 import  infoResourceList  from './pages/info/cards/component/infoResourceList'
 import  scatterDataList  from './pages/scatteredData/cards/component/scatterDataList'
+import  newScatterData  from './pages/scatteredData/cards/component/newScatterData'
 //数据服务
 import addNewService from './pages/dataService/component/addNewService'
 import serviceList from './pages/dataService/dataServiceType/serviceList'
@@ -135,6 +136,8 @@ const routes = (
       <Route path="/dataApp/appAttribute" component={appAttribute} />
       <Route path="/info/infoResourceList" component={infoResourceList} />
       <Route path="/scatteredData/scatterDataList" component={scatterDataList} />
+      <Route path="/scatteredData/newScatterData" component={newScatterData} />
+
 
       <Route path="/dataService" component={dataService} />
       <Route path="/info" component={info} />

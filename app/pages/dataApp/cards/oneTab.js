@@ -26,6 +26,54 @@ export default class cards extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      appClassData:[
+        {
+          id: 1,
+          title: '数据碰撞1',
+          number: '11'
+        },
+        {
+          id: 2,
+          title: '数据碰撞2',
+          number: '22'
+        },
+        {
+          id: 3,
+          title: '数据碰撞3',
+          number: '33'
+        },
+        {
+          id: 4,
+          title: '数据碰撞4',
+          number: '44'
+        }
+      ],
+      appAddData:[
+        {
+          id: 1,
+          date: '2016-12-02',
+          time: '13:14:15',
+          describe: '上传',
+          name: '《多人关系对比》',
+          whichApp: '原生应用',
+        },
+        {
+          id: 2,
+          date: '2016-12-02',
+          time: '13:14:15',
+          describe: '上传',
+          name: '《多人关系对比》',
+          whichApp: '原生应用',
+        },
+        {
+          id: 3,
+          date: '2016-12-02',
+          time: '13:14:15',
+          describe: '上传',
+          name: '《多人关系对比》',
+          whichApp: '原生应用',
+        },
+      ],
     }
   }
 
@@ -73,6 +121,35 @@ export default class cards extends Component {
       )
   }
   render() {
+    // console.log(this.state.appClassData)
+    const appClassTd = this.state.appClassData.map((item, index) => {
+      return (
+        <tr key={index}>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+          <td>
+            {item.title}<span><Link to={`/dataApp/appList`}>{item.number}</Link></span>
+          </td>
+        </tr>
+      )
+    })
+    const appAddTd = this.state.appAddData.map((item, index) => {
+      return (
+        <tr key={index}>
+          <td className="appAddItem">
+            <span>{item.date}</span>&nbsp;&nbsp;
+            <span>{item.time}</span>&nbsp;&nbsp;
+            <span>{item.describe}</span>&nbsp;&nbsp;
+            <span className="appAddName">{item.name}</span>&nbsp;&nbsp;
+            <span className="whichApp">{item.whichApp}</span>
+          </td>
+        </tr>
+      )
+    })
     return (
       <div className="hjt-dataApp">
         <Col span="12">
@@ -103,29 +180,13 @@ export default class cards extends Component {
           <Row>
             <Card title={this.appClassTitle()} >
               <table className="appClassTable">
-                <tbody>
-                  <tr>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                  </tr>
-                  <tr>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                  </tr>
-                  <tr>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                    <td>数据碰撞<span><Link to={`/dataApp/appList`}>17</Link></span></td>
-                  </tr>
-                </tbody>
-              </table>
+                <tbody>{appClassTd}</tbody>
+              </table> 
             </Card>
           </Row> 
           <Row>
             <Card title={this.appSuggestTitle()} >
-              <table className="appSuggestTable">
+              <table className="appSuggestTable tbl tbl-log">
                 <tbody>
                   <tr>
                     <td><Link to={`/dataApp/appAttribute`}>地铁高频人员信息</Link></td>
@@ -150,29 +211,9 @@ export default class cards extends Component {
         <Col span="12" className="rightCol">
           <Row>
             <Card  title={this.appAddTitle()} >
-              <ul className="appAddWrap">
-                <li className="appAddItem">
-                  <span>2016-12-02</span>&nbsp;&nbsp;
-                  <span>13:14:15</span>&nbsp;&nbsp;
-                  <span>上传</span>&nbsp;&nbsp;
-                  <span className="appAddName">《多人关系对比》</span>&nbsp;&nbsp;
-                  <span>原生应用</span>
-                </li>
-                <li className="appAddItem">
-                  <span>2016-12-02</span>&nbsp;&nbsp;
-                  <span>13:14:15</span>&nbsp;&nbsp;
-                  <span>上传</span>&nbsp;&nbsp;
-                  <span className="appAddName">《多人关系对比》</span>&nbsp;&nbsp;
-                  <span>原生应用</span>
-                </li>
-                <li className="appAddItem">
-                  <span>2016-12-02</span>&nbsp;&nbsp;
-                  <span>13:14:15</span>&nbsp;&nbsp;
-                  <span>上传</span>&nbsp;&nbsp;
-                  <span className="appAddName">《多人关系对比》</span>&nbsp;&nbsp;
-                  <span>原生应用</span>
-                </li>
-              </ul>
+              <table className="appAddTable">
+                <tbody>{appAddTd}</tbody>
+              </table> 
             </Card>
           </Row>
           <Row className="specialRow">

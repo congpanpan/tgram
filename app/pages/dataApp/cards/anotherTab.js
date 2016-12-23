@@ -4,7 +4,7 @@ import { Table, Row, Col, Button ,Form,Select,Input,Pagination} from 'antd'
 //引入请求的模块
 import { connect } from 'react-redux'
 import { updateTabList } from 'actions/tabList'
-import  './style.less'
+import  './component/style.less'
 /*import {
   fetchRelyList,  
   } from 'actions/rely'*/
@@ -39,28 +39,30 @@ export default class TypeList extends Component {
       list:[
         {
           appName: '数印搜索', 
-          appMaker: '特朗普',
-          appClass: '数据分析',
-          ifNative: '是',
-          appUseNumber: '32121',
-          appExam: '合格'
-        },
-        {
-          appName: '多人关系对比', 
-          appMaker: '特朗普',
-          appClass: '数据分析',
-          ifNative: '是',
-          appUseNumber: '32121',
-          appExam: '合格'
+          appClass: '特朗普',
+          appSClass: '数据分析',
+          place: 'www.baidu.com',
+          edition: '32121',
+          applyTime: '2016-02-08',
+          examTime: '2016-02-08',   
+          examMore: '合格的产品',
+          examSign: '合格',
+          examState: '合格',
+          operation: '无',
         },
         {
           appName: '数印搜索', 
-          appMaker: '特朗普',
-          appClass: '数据分析',
-          ifNative: '是',
-          appUseNumber: '32121',
-          appExam: '合格'
-        }
+          appClass: '特朗普',
+          appSClass: '数据分析',
+          place: 'www.baidu.com',
+          edition: '32121',
+          applyTime: '2016-02-08',
+          examTime: '2016-02-08',   
+          examMore: '合格的产品',
+          examSign: '合格',
+          examState: '合格',
+          operation: '无',
+        },
       ]
      }
   }
@@ -69,8 +71,8 @@ export default class TypeList extends Component {
     if (this.props.params) {
       // 若非嵌套，则执行
       this.props.dispatch(updateTabList({
-        title: `模型应用`,
-        key: `/dataApp/appModel`,
+        title: `原生应用`,
+        key: `/dataApp/appNative`,
       }))
     } 
   }
@@ -81,7 +83,7 @@ export default class TypeList extends Component {
         title: '应用名称',
         dataIndex: 'appName',
         key: 'appName',
-        width: '25%',
+        width: '11%',
         render: function(text,record){
           // debugger
           // console.log(record)
@@ -93,34 +95,64 @@ export default class TypeList extends Component {
         }
       },
       {
-        title: '应用分类',
+        title: '应用类别',
         dataIndex: 'appClass',
         key: 'appClass',
-        width: '15%',
+        width: '8%',
       },
       {
-        title: '是否原生',
-        dataIndex: 'ifNative',
-        key: 'ifNative',
-        width: '15%',
+        title: '应用分类',
+        dataIndex: 'appSClass',
+        key: 'appSClass',
+        width: '8%',
       },
       {
-        title: '开发单位、制作人',
-        dataIndex: 'appMaker',
-        key: 'appMaker',
-        width: '20%',
+        title: '访问地址',
+        dataIndex: 'place',
+        key: 'place',
+        width: '11%',
       },
       {
-        title: '应用次数',
-        dataIndex: 'appUseNumber',
-        key: 'appUseNumber',
-        width: '15%',
+        title: '版本号',
+        dataIndex: 'edition',
+        key: 'edition',
+        width: '11%',
+      },
+      {
+        title: '申请时间',
+        dataIndex: 'applyTime',
+        key: 'applyTime',
+        width: '10%',
+      },
+      {
+        title: '审核时间',
+        dataIndex: 'examTime',
+        key: 'examTime',
+        width: '10%',
       },
       {
         title: '审核备注',
-        dataIndex: 'appExam',
-        key: 'appExam',
-        width: '20%',
+        dataIndex: 'examMore',
+        key: 'examMore',
+        width: '10%',
+      },
+      {
+        title: '推荐标志',
+        dataIndex: 'examSign',
+        key: 'examSign',
+        width: '8%',
+      },
+      {
+        title: '审核状态',
+        dataIndex: 'examState',
+        key: 'examState',
+        width: '8%',
+      },
+      {
+        title: '操作',
+        dataIndex: 'operation',
+        key: 'operation',
+        width: '5%',
       },
     ]
   }
@@ -177,6 +209,23 @@ export default class TypeList extends Component {
                 <Option value="中国共产党员">中国共产党员</Option>
                 <Option value="中国共产党预备员">中国共产党预备员</Option>   
               </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Select defaultValue="模型应用">
+                <Option value="中国共产党员">中国共产党员</Option>
+                <Option value="中国共产党预备员">中国共产党预备员</Option>   
+              </Select>
+            }
+          </FormItem>
+          <FormItem
+            {...formItemLayout}
+          >
+            {
+              <Input placeholder="搜索"/>
             }
           </FormItem>
         </Form>

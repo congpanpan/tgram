@@ -135,7 +135,7 @@ export default class TypeList extends Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div className="tableWrap" >
+      <div className="tableWrap body" style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px', paddingBottom: '20px'}} >
         <div  className="addNativeWrap">
           <h4>新建模型应用</h4>
           <table>

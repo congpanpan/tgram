@@ -1,7 +1,8 @@
 /*服务申请*/
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Table, Button, Tabs,Row,Col,Input } from 'antd'
+import { Link } from 'react-router'
+import { Table, Button, Tabs,Row,Col,Input} from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
 
@@ -52,7 +53,8 @@ export default class dataApp extends Component {
           </Col>
           <Col span={6}>
             <div className='serviceManage-button-cpp'> 
-              <Button>新增服务</Button>
+              <Button><Link  to={`/dataService/addNewService`}><span>新增服务</span></Link></Button>
+
             </div>
           </Col>
         </Row>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Table, Button, Tabs,Menu,Dropdown,Icon } from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
-import './style.css'
+import './style.less'
 import DataServiceHome from './dataServiceType/dataServiceHome'
 import DataServiceManage from './dataServiceType/dataServiceManage'
 import DataServiceApply  from './dataServiceType/dataServiceApply'
@@ -63,16 +63,12 @@ export default class dataService extends Component {
       </Menu>
       )
     return (
-        <div className="list-tab">
+        <div  className='dataService-tab'>
           <Tabs tabPosition="top" onChange={this._typeChange}>
             <TabPane tab="服务首页" key="1" >
              <DataServiceHome/>
             </TabPane>
             <TabPane tab="服务管理" key="2">
-             {/* <Dropdown overlay={menu}>
-                
-              </Dropdown>*/}
-
               <DataServiceManage/>
             </TabPane>
              <TabPane tab="服务申请" key="3">

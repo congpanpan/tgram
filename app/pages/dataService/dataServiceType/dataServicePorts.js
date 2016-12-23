@@ -1,12 +1,15 @@
 /*定制接口的申请*/
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Table, Button, Tabs,Input } from 'antd'
+import { Table, Button, Tabs,Input,Form ,Select} from 'antd'
 import { updateTabList } from 'actions/tabList'
 import Panel from 'components/panel'
 
 
 const TabPane = Tabs.TabPane;
+const createForm = Form.create
+const FormItem = Form.Item
+const Option = Select.Option
 
 
 
@@ -16,6 +19,10 @@ const TabPane = Tabs.TabPane;
       config: state.config,
     })
 )
+@Form.create({
+    
+})
+
 
 // 声明组件  并对外输出
 export default class dataApp extends Component {
@@ -35,17 +42,36 @@ export default class dataApp extends Component {
         key: `/dataApp`,
       }))
     }
-
     
   }
 
 
   render() {
+     const formItemLayout = {
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 },
+    };
     return (
       <Panel>
-         <div className='search-cpp'>
-            <Input  placeholder="搜索服务名称"/>
-          </div>
+        <div className="appRankWrap">
+          <Form >
+            <FormItem
+              {...formItemLayout}
+            >
+              <Input  placeholder="搜索服务名称"/>  
+            </FormItem>  
+            <FormItem
+              {...formItemLayout}
+            >
+              {
+                <Select defaultValue="提供方">
+                  <Option value="WR">WR</Option>
+                  <Option value="borf">borf</Option>   
+                </Select>
+              }
+            </FormItem>
+          </Form>
+        </div>
       
       </Panel>
     )

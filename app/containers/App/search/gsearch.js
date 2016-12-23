@@ -79,25 +79,25 @@ export default class gsearch extends Component{
               title: '身份登记',
               list: [
                 {
-                  id: 1,
+                  id: 6,
                   name: '驾照登记',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 2,
+                  id: 7,
                   name: '驾驶学员登记',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 3,
+                  id: 8,
                   name: '市民卡',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 4,
+                  id: 9,
                   name: '出入境证件登记',
                   type: 1,
                   checked: false
@@ -113,13 +113,13 @@ export default class gsearch extends Component{
               title: '车辆登记',
               list: [
                 {
-                  id: 1,
+                  id: 10,
                   name: '机动车登记',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 2,
+                  id: 11,
                   name: '电动自行车登记',
                   type: 2,
                   checked: false
@@ -130,25 +130,25 @@ export default class gsearch extends Component{
               title: '车辆轨迹',
               list: [
                 {
-                  id: 1,
+                  id: 12,
                   name: '卡口过车记录',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 2,
+                  id: 13,
                   name: '城管泊车记录',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 3,
+                  id: 14,
                   name: '市民卡',
                   type: 1,
                   checked: false
                 },
                 {
-                  id: 4,
+                  id: 15,
                   name: '出入境证件登记',
                   type: 1,
                   checked: false
@@ -180,7 +180,20 @@ export default class gsearch extends Component{
   }
 
   handleOk(){
-
+    const currentTab = this.state.currentTab
+    const selectedList = []
+    this.state.data.map((tab, index) => {
+      tab.tab==currentTab?
+      tab.pane.map((pane, index) => {
+          pane.list.map(list => {
+            if(list.checked){
+              selectedList.push({id:list.id,name:list.name,type:list.type,checked:false})
+            }
+          })
+      }):null
+    })
+    this.setState({selectedList:selectedList})
+    // this.setState({selectedList:[...selectedList,this.state.selectedList]})
   }
   //全部选择
   selectAll(){

@@ -73,7 +73,7 @@ export default class converage extends Component{
       wholeSearch: (<WholeSearch/>),
     }
 		return(
-      <div style={{height:$GLOBALCONFIG.PAGEHEIGHT-20+'px',overflowY:'auto'}}>
+      <div style={{height:$GLOBALCONFIG.PAGEHEIGHT-30+'px',overflowY:'auto'}}>
         <WindowSize updateState={this.updateState}/>
   			<Panel>
           <Spin spinning={ false }>

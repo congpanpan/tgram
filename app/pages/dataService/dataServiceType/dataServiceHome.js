@@ -158,8 +158,8 @@ export default class dataApp extends Component {
                   </ul>
                 </div>
               </Card>
-               <Card title="服务排行"  extra={<Link to={`/dataService/serviceList`}>更多</Link>}>
-                  <div className='service-table-cpp'>
+               <Card title="服务排行" className='service-div-cpp'  extra={<Link to={`/dataService/serviceList`}>更多</Link>}>
+                  <div >
                     <Table
                        columns={this.columns()} 
                         dataSource={this.state.dataSource}
